@@ -1,0 +1,34 @@
+/* reset : mettre à 0 toutes les propriété du navigateur */
+html{
+    font-size: 62.5%; 
+    /* 
+    taille de la police de caractère
+    62.5% * 16 = 10.00rem = root em
+    */
+}
+body{
+    font: 1.6rem sans-serif; /* taille + police 1.6rem */
+    margin: 0;
+    letter-spacing: 0.1rem; /* 1px */
+    line-height: 1.6; /* 16px */
+    background-color: var(--theme-bg-color);
+    color: var(--theme-text-color);
+}
+h1,h2,h3,p,ul{ /* contexte de balises ayant les mêmes props */
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    list-style: none;
+}
+
+
+
+/* Initialisation des variables pour le thème principal */
+
+:root{
+    --theme-bg-color : rgb(45, 52, 54);
+    --theme-text-color : rgb(255, 255, 255);
+    --letter-color-default : #222;
+    --bgcolor-header : #222;
+    --bgcolor-list : rgb(223, 230, 233);
+}

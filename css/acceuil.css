@@ -1,0 +1,12 @@
+@import url(./reset.css);
+
+/* header */ 
+
+header {
+    background-color: var(--bgcolor-header);
+}
+
+header > h1 {
+    text-align: center;
+    color: navy;
+}

@@ -1,4 +1,4 @@
 {
     "livePreview.mainBundleJsPath": ".\\..\\live-preview\\main.bundle.js²",
-    "files.autoSave": "onFocusChange"
+    "files.autoSave": "afterDelay"
 }
