@@ -1,3 +1,13 @@
+/* Initialisation des variables pour le thème principal */
+
+:root{
+    --theme-bg-color : rgb(45, 52, 54);
+    --theme-text-color : rgb(255, 255, 255);
+    --letter-color-default : #222;
+    --bgcolor-header : #222;
+    --bgcolor-list : rgb(223, 230, 233);
+}
+
 /* reset : mettre à 0 toutes les propriété du navigateur */
 html{
     font-size: 62.5%; 
@@ -12,23 +22,11 @@ body{
     letter-spacing: 0.1rem; /* 1px */
     line-height: 1.6; /* 16px */
     background-color: var(--theme-bg-color);
-    color: var(--theme-text-color);
+    color: var(--letter-color-default);
 }
 h1,h2,h3,p,ul{ /* contexte de balises ayant les mêmes props */
     margin: 0;
     padding: 0;
     font-weight: normal;
     list-style: none;
-}
-
-
-
-/* Initialisation des variables pour le thème principal */
-
-:root{
-    --theme-bg-color : rgb(45, 52, 54);
-    --theme-text-color : rgb(255, 255, 255);
-    --letter-color-default : #222;
-    --bgcolor-header : #222;
-    --bgcolor-list : rgb(223, 230, 233);
 }
