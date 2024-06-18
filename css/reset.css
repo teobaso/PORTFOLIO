@@ -21,8 +21,8 @@ body{
     margin: 0;
     letter-spacing: 0.1rem; /* 1px */
     line-height: 1.6; /* 16px */
-    background-color: var(--theme-bg-color);
-    color: var(--letter-color-default);
+    background-color: white;
+    color: black;
 }
 h1,h2,h3,p,ul{ /* contexte de balises ayant les mêmes props */
     margin: 0;
