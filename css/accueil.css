@@ -1,8 +1,15 @@
+
+
+/* TEST DE CSS */
+/* -------------------------------------------------------------------------------------------------------------------------- */
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+/* ------------------------------------------------------------------------------------------------------------------------------- */
+
 @import url("./reset.css");
 
-/* header */ 
+/* header */
 
-*{
+* {
     overflow: hidden;
 }
 
@@ -17,48 +24,106 @@ header > h1 {
     margin-bottom: 1rem;
 }
 
-header > h1 span{
+header > h1 span {
     vertical-align: 0.2rem; /* 2px */
 }
 
-/*body*/
+/* body */
 
-body{
+body {
     background-color: var(--theme-bg-color);
     color: var(--theme-text-color);
 }
 
-#reseau{
-    background-image: image("..\asset\reseau.png");
-}
-
 body main ul li {
-    color: var(--theme-text-color);
+    color: beige;
     background-color: var(--bgcolor-header);
     line-height: 35rem;
     text-align: center;
-    border-radius: 5rem;
+    position: relative;
     display: block;
     float: left;
     width: calc(100% / 5 - 1rem);
     height: 35rem;
-    margin: 17.5rem 0.5rem 17.5rem 0.5rem;
-    background-repeat: no-repeat; /* Ne pas répéter l'image */
-    background-size: cover; /* Couvrir entièrement la carte */
-    background-position: center; /* Centrer l'image */
+    margin: 17.5rem 0.5rem;
+    border-radius: 5rem;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-body main ul li:hover{
+body main ul li a {
+    z-index: 3;
+    text-decoration: none;
+    color: var(--theme-text-color);
+}
+
+body main ul li::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+#reseau::before{
+    background-image: url("../asset/reseau.png");
+    content: "Réseau";
+}
+
+#dev::before{
+    background-image: url("../asset/dev.png");
+    content: "Développement";
+}
+
+#xp::before{
+    background-image: url("../asset/xp.png");
+    content: "Expériences";
+}
+
+#certif::before{
+    background-image: url("../asset/certif.png");
+    content: "Certifications";
+}
+
+#me::before{
+    background-image: url("../asset/me.png");
+    content: "A propos de moi";
+}
+
+body main ul li:hover {
     transform: scale(1.15); /* Agrandir la carte de 15% au survol */
-    transition: transform 0.3s ease;
     z-index: 2;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    line-height: 65rem;
 }
 
-/* footer */ 
+body main ul li:hover::before {
+    filter: blur(5px);
+}
 
-footer{
+.hidden-text {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+body main ul li:hover .hidden-text {
+    display: block;
+    opacity: 1;
+}
+
+/* footer */
+
+footer {
     text-align: center;
     background-color: var(--bgcolor-header);
     color: var(--theme-text-color);
