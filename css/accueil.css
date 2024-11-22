@@ -1,32 +1,29 @@
-/* TEST DE CSS */
-/* -------------------------------------------------------------------------------------------------------------------------- */
-/* ----------------------------------------------------------------------------------------------------------------------------- */
-/* ------------------------------------------------------------------------------------------------------------------------------- */
-
 @import url("./reset.css");
 
 /* header */
 
 * {
     overflow: hidden;
+    font-family: "Montserrat", sans-serif;
 }
 
 header {
     background-color: var(--bgcolor-header);
-    margin-top: 6rem;
-    margin-bottom: -6rem;
+    margin-top: 4rem;
+    margin-bottom: -4rem;
     margin-left: 25%;
     border-radius: 2rem;
     width: 50%;
 }
 
-header>h1 {
+header > h1 {
+    font-weight: 500;
     text-align: center;
     color: var(--theme-text-color);
     line-height: 7rem;
 }
 
-header>h1 span {
+header > h1 span {
     vertical-align: 0.2rem;
     /* 2px */
 }
@@ -38,22 +35,32 @@ body {
     color: var(--theme-text-color);
 }
 
+body main ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
 body main ul li {
-    line-height: 35rem;
-    text-align: center;
     position: relative;
     display: block;
+    width: calc(100% / 5 - 1rem); /* Ajustement pour s'assurer que les cartes s'alignent correctement */
     float: left;
-    width: calc(100% / 5 - 1rem);
     height: 35rem;
-    margin: 17.5rem 0.5rem;
+    margin: 11.7rem 0.5rem;  /* Réduction de la marge pour plus d'espace */
     border-radius: 5rem;
     overflow: hidden;
     transition: transform 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);  /* Pour une meilleure visibilité */
+    text-align: center;
 }
 
 body main ul li a {
-    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
     text-decoration: none;
     color: var(--theme-text-color);
 }
@@ -68,31 +75,39 @@ body main ul li::before {
     background-position: center;
     background-repeat: no-repeat;
     transition: filter 0.3s ease, opacity 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 1rem;
+    box-sizing: border-box;
 }
 
-#reseau::before {
-    background-image: url("../asset/reseau.png");
-    content: "Réseau - Système ";
+#comp::before {
+    background-image: url("../asset/comp.png");
+    content: "Mes compétences";
 }
 
-#dev::before {
-    background-image: url("../asset/dev.png");
-    content: "Développement";
+#project::before {
+    background-image: url("../asset/project.png");
+    content: "Mes projets";
 }
 
 #xp::before {
     background-image: url("../asset/xp.png");
-    content: "Expériences";
+    content: "Mes expériences";
 }
 
 #certif::before {
     background-image: url("../asset/certif.png");
-    content: "Certifications";
+    content: "Mes certifications";
 }
 
 #me::before {
     background-image: url("../asset/me.png");
-    content: "A propos de moi";
+    content: "À propos de moi";
 }
 
 body main ul li:hover {
@@ -107,7 +122,6 @@ body main ul li:hover::before {
 }
 
 .hidden-text {
-    display: none;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -115,11 +129,18 @@ body main ul li:hover::before {
     color: white;
     font-size: 1.5rem;
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s ease;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    box-sizing: border-box;
 }
 
 body main ul li:hover .hidden-text {
-    display: block;
     opacity: 1;
 }
 
@@ -130,5 +151,4 @@ footer {
     background-color: var(--bgcolor-header);
     color: var(--theme-text-color);
     line-height: 4.5rem;
-    margin-top: 8.8rem;
 }

@@ -29,12 +29,12 @@ body{
 }
 
 #reseau{
-    background-image: url("../asset/reseau.png");
+    background-image: url("../asset/comp.png");
     
 }
 
 #dev{
-    background-image: url("../asset/dev.png");
+    background-image: url("../asset/project.png");
 }
 
 #xp{
@@ -52,9 +52,6 @@ body{
 
 body main ul li {
     color: beige;
-    background-color: var(--bgcolor-header);
-    line-height: 35rem;
-    text-align: center;
     background-color: var(--bgcolor-header);
     line-height: 35rem;
     text-align: center;

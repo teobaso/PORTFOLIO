@@ -1,5 +1,7 @@
 /* Initialisation des variables pour le thème principal */
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root{
     --theme-bg-color : rgb(45, 52, 54);
     --theme-text-color : rgb(255, 255, 255);
@@ -19,6 +21,7 @@ html{
 body{
     font: 1.6rem sans-serif; /* taille + police 1.6rem */
     margin: 0;
+    padding: 0;
     letter-spacing: 0.1rem; /* 1px */
     line-height: 1.6; /* 16px */
     background-color: white;
