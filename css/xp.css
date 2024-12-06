@@ -1,4 +1,5 @@
 @import url("./reset.css");
+@import url("./menu.css");
 
 h1{
     font-weight: 900;
@@ -57,6 +58,77 @@ path {
     stroke-width: 2;
     fill: none;
     stroke-dasharray: 5, 5;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 555;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    background-color: var(--bgcolor-header);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.popup.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.popup-images {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.popup-images img {
+    max-width: 45%;
+    border-radius: 10px;
+}
+
+#close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: var(--bgcolor-list);
+    color: var(--bgcolor-header);
+    border-radius: 100%;
+}
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--bgcolor-list);
+    color: var(--bgcolor-header);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1.2rem;
+}
+
+.content {
+    text-align: center;
+}
+
+
+.summaryText {
+    display: none;
+    text-align: center;
+}
+
+#close-popup{
+
 }
 
 body main {
