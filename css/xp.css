@@ -1,4 +1,3 @@
-@import url("./reset.css");
 @import url("./menu.css");
 
 h1{
@@ -87,9 +86,14 @@ path {
 }
 
 .popup-images img {
-    max-width: 45%;
+    max-width: 75%;
     border-radius: 10px;
 }
+
+#popup-image2{
+    max-width: 35%;
+}
+
 
 #close-popup {
     position: absolute;
@@ -119,18 +123,18 @@ path {
 
 .content {
     text-align: center;
+    margin-top: 1.5rem;
 }
 
 
 .summaryText {
     display: none;
+}
+
+#popup-summary{
+    display: block;
     text-align: center;
+    width: 100%;
+    height: 100%;
 }
 
-#close-popup{
-
-}
-
-body main {
-    height: 200%;
-}

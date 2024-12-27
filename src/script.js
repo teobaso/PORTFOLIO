@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const points = document.querySelectorAll('.point');
     const popup = document.getElementById('popup');
-    const popupContent = document.querySelector('.popup-content'); // Correction : sélection de .popup-content
+    const popupContent = document.querySelector('.popup-content');
     const popupSummary = document.getElementById('popup-summary');
     const popupImage1 = document.getElementById('popup-image1');
     const popupImage2 = document.getElementById('popup-image2');
@@ -9,11 +9,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     points.forEach(point => {
         point.addEventListener('click', () => {
-            const summary = point.getAttribute('data-summary');
             const image1 = point.getAttribute('data-image1');
             const image2 = point.getAttribute('data-image2');
 
-            popupSummary.innerHTML = summary;
+            // Afficher le texte de la balise <p> dans la popup
+            let summaryText;
+            summaryText = point.querySelector('.summaryText').innerText;
+            popupSummary.innerHTML = summaryText;
 
             if (image1) {
                 popupImage1.src = image1;
@@ -40,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Fermer la pop-up en cliquant en dehors du contenu de la pop-up
     window.addEventListener('click', (event) => {
         if (!popupContent.contains(event.target) && !event.target.classList.contains('point')) {
-            popup.classList.remove('active'); // Retire la classe active pour cacher la pop-up
+            popup.classList.remove('active');
         }
     });
 });

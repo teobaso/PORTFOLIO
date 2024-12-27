@@ -1,0 +1,73 @@
+@import url("./menu.css");
+
+h1{
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+body main ul li {
+    position: relative;
+    display: inline-block;
+    height: 35rem;
+    border-radius: 5rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+body main ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 4.2rem;
+}
+
+.case{
+    max-width: 35rem;
+    background-color: var(--bgcolor-header);
+    align-content: center;
+}
+
+img{
+    max-width: 15rem;
+    max-height: 15rem;
+    margin: 2rem 10rem;
+}
+
+body main ul li:hover {
+    transform: scale(1.15);
+    /* Agrandir la carte de 15% au survol */
+    z-index: 2;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Ajoute ce bloc pour flouter l'image et le texte (span) */
+body main ul li:hover img,
+body main ul li:hover span {
+    filter: blur(8rem);
+}
+
+
+.text-certif {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+body main ul li:hover .text-certif {
+    opacity: 1;
+}

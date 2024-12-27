@@ -1,0 +1,42 @@
+@import url("./menu.css");
+
+h1{
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.skills-container {
+    max-width: 60rem;
+    margin: 0 auto 1.5rem;
+    padding: 20px;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.skill {
+    margin-bottom: 1.5rem;
+}
+
+.skill p {
+    margin: 0 0 0.5rem;
+    font-weight: bold;
+}
+
+.skill-bar {
+    background-color: #e0e0e0;
+    border-radius: 2.5rem;
+    /*overflow: hidden;*/
+    height: 2.5rem;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: #76c7c0;
+    border-radius: 2.5rem;
+}

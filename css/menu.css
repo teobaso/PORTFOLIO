@@ -42,8 +42,12 @@ body header ul li a:hover {
     color: black;
 }
 
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
 body main {
-    height: 200%;
     padding-top: 8rem;
 }
 
