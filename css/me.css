@@ -18,49 +18,43 @@ h2{
     border-radius: 1.5rem;
 }
 
+.aboutme a{
+    justify-items: center;
+}
+
 body main div p {
     text-align: justify;
     margin: 0.5rem 2.5rem;
 }
 
 .button {
-    margin: 0.5rem 45%;
-    padding: 0.5rem 1rem;
-    justify-items: center;
+    margin: 1rem 42.5%;
     background-color: var(--theme-bg-color);
-    border: none;
     border-radius: 1.5rem;
-}
-
-.button-link {
     text-decoration: none;
     color: var(--theme-text-color);
     display: inline-block; /* Cela permet de donner une apparence de bouton au lien */
-    width: 100%;
-    height: 100%;
+    width: 15%;
     text-align: center;
-    font-weight: 700;
+    font-weight: 500;
     font-style: italic;
 }
 
 .button:hover {
     background-color: var(--theme-text-color);
-}
-.button:hover .button-link {
     color: var(--theme-bg-color);
 }
 
 .buttoncv{
     align-items: center;
     background-color: var(--theme-bg-color);
-    border: none;
     text-decoration: none;
     border-radius: 3rem;
     color: var(--theme-text-color);
     margin: 1rem 0 1rem 25%;
     padding: 0.5rem 1rem;
     text-align: center;
-    font-weight: 700;
+    font-weight: 500;
     font-style: italic;
 }
 
@@ -68,6 +62,7 @@ body main div p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     max-width: 90%;
+    padding: 0.1rem;
 }
 
 .svg-icon{
