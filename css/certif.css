@@ -1,11 +1,5 @@
 @import url("./menu.css");
 
-h1{
-    font-weight: 900;
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
 body main ul li {
     position: relative;
     display: inline-block;

@@ -1,10 +1,5 @@
 @import url("./menu.css");
 
-h1{
-    font-weight: 900;
-    text-align: center;
-    margin-bottom: 2rem;
-}
 .skills-container {
     max-width: 60rem;
     margin: 0 auto 1.5rem;
