@@ -6,6 +6,7 @@ body main ul li {
     height: 35rem;
     border-radius: 5rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    color: var(--bgcolor-list);
     transition: transform 0.3s ease;
     text-align: center;
 }
@@ -19,7 +20,7 @@ body main ul {
 
 .case{
     max-width: 35rem;
-    background-color: var(--bgcolor-header);
+    background-color: var(--bgcolor-menu);
     align-content: center;
 }
 
@@ -64,4 +65,9 @@ body main ul li:hover span {
 
 body main ul li:hover .text-certif {
     opacity: 1;
+}
+
+
+footer {
+    margin-top: 2.2rem ;
 }

@@ -28,6 +28,7 @@ h1{
 .point:hover .tooltip {
     opacity: 1;
     visibility: visible;
+    color: var(--letter-color-default);
 }
 
 .tooltip {
@@ -53,7 +54,7 @@ h1{
 }
 
 path {
-    stroke: var(--bgcolor-header);
+    stroke: var(--bgcolor-menu);
     stroke-width: 2;
     fill: none;
     stroke-dasharray: 5, 5;
@@ -67,7 +68,7 @@ path {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 60%;
-    background-color: var(--bgcolor-header);
+    background-color: var(--bgcolor-menu);
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding: 20px;

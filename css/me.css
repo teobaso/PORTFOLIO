@@ -24,7 +24,7 @@ body main div p {
 
 .button {
     margin: 1rem 42.5%;
-    background-color: var(--theme-bg-color);
+    background-color: var(--bgcolor-menu);
     border-radius: 1.5rem;
     text-decoration: none;
     color: var(--theme-text-color);
@@ -42,7 +42,7 @@ body main div p {
 
 .buttoncv{
     align-items: center;
-    background-color: var(--theme-bg-color);
+    background-color: var(--bgcolor-menu);
     text-decoration: none;
     border-radius: 3rem;
     color: var(--theme-text-color);

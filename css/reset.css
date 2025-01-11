@@ -3,10 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root{
-    --theme-bg-color : rgb(45, 52, 54);
+    --theme-bg-color : rgb(210, 180, 140);
     --theme-text-color : rgb(255, 255, 255);
     --letter-color-default : #222;
-    --bgcolor-header : #222;
+    --bgcolor-header : rgb(179, 154, 120);
+    --bgcolor-menu : rgb(166, 123, 91);
     --bgcolor-list : rgb(223, 230, 233);
 }
 
