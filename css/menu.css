@@ -43,9 +43,9 @@ body header ul li:hover {
     background-color: var(--bgcolor-list);
 }
 
-body header ul li a:hover {
-    color: var(--bgcolor-menu);
-}
+/*body header ul li a:hover {*/
+/*    color: var(--bgcolor-menu);*/
+/*}*/
 
 body main {
     padding-top: 8rem;
