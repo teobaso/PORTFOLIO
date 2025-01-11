@@ -125,6 +125,7 @@ path {
 .content {
     text-align: center;
     margin-top: 1.5rem;
+    color: var(--bgcolor-list);
 }
 
 
