@@ -47,7 +47,7 @@ body main ul li {
     width: calc(100% / 5 - 1rem); /* Ajustement pour s'assurer que les cartes s'alignent correctement */
     float: left;
     height: 35rem;
-    margin: 11.7rem 0.5rem;  /* Réduction de la marge pour plus d'espace */
+    margin: 11.7rem 0.5rem 5rem 0.5rem;  /* Réduction de la marge pour plus d'espace */
     border-radius: 5rem;
     overflow: hidden;
     transition: transform 0.3s ease;
@@ -217,6 +217,6 @@ body main ul li:hover .hidden-text {
 footer {
     text-align: center;
     background-color: var(--bgcolor-header);
-    color: var(--theme-text-color);
+    color: var(--letter-color-default);
     line-height: 4.5rem;
 }
