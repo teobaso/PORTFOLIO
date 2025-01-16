@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const popupSummary = document.getElementById('popup-summary'); // Résumé dans la popup
     const popupImage = document.getElementById('popup-image'); // Image dans la popup
     const closePopup = document.getElementById('close-popup'); // Bouton pour fermer la popup
+    const refDoc = document.querySelector('.buttondoc[href^="consult"]'); // Bouton de consultation
+    const refDownload = document.querySelector('.buttondoc[href^="download"]'); // Bouton de téléchargeme
 
     // Parcourir chaque "realisation"
     rea.forEach(realisation => {
@@ -17,9 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
             // Récupérer les données de l'élément
             const imageSrc = realisation.getAttribute('data-image'); // Image associée
             const realisationText = realisation.querySelector('.summaryText').innerText; // Résumé
+            const refDocsingle = realisation.getAttribute('data-refdoc');
+            const refDownloadsingle = realisation.getAttribute('data-refdownload');
 
             // Ajouter le texte et l'image à la popup
             popupSummary.innerText = realisationText;
+
+            if (refDoc) refDoc.href = refDocsingle || '#';
+            if (refDownload) refDownload.href = refDownloadsingle || '#';
+
 
             if (imageSrc) {
                 popupImage.src = imageSrc;

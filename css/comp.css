@@ -26,12 +26,15 @@ h2 {
 .skill-bar {
     background-color: #e0e0e0;
     border-radius: 2.5rem;
-    /*overflow: hidden;*/
     height: 2.5rem;
 }
 
 .skill-level {
     height: 100%;
-    background-color: #A67B5B;
+    background-color: var(--bgcolor-menu);
     border-radius: 2.5rem;
+}
+
+.pourcent{
+    text-align: right;
 }
