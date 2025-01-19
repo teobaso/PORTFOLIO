@@ -1,6 +1,6 @@
 @import url("./menu.css");
 
-body main ul li {
+.case {
     position: relative;
     display: inline-block;
     height: 35rem;
@@ -11,7 +11,7 @@ body main ul li {
     text-align: center;
 }
 
-body main ul {
+.certif{
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -30,7 +30,7 @@ img{
     margin: 2rem 10rem;
 }
 
-body main ul li:hover {
+.case:hover {
     transform: scale(1.15);
     /* Agrandir la carte de 15% au survol */
     z-index: 2;
@@ -38,8 +38,8 @@ body main ul li:hover {
 }
 
 /* Ajoute ce bloc pour flouter l'image et le texte (span) */
-body main ul li:hover img,
-body main ul li:hover span {
+.case:hover img,
+.case:hover span {
     filter: blur(8rem);
 }
 
@@ -63,7 +63,7 @@ body main ul li:hover span {
     box-sizing: border-box;
 }
 
-body main ul li:hover .text-certif {
+.case:hover .text-certif {
     opacity: 1;
 }
 

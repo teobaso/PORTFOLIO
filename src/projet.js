@@ -1,33 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const rea = document.querySelectorAll('.realisation'); // Toutes les divs "realisation"
+    const rea = document.querySelectorAll('.realisation'); // Tous les projets
     const popup = document.getElementById('popup'); // La popup
     const popupContent = document.querySelector('.popup-content'); // Contenu de la popup
-    const popupSummary = document.getElementById('popup-summary'); // Résumé dans la popup
-    const popupImage = document.getElementById('popup-image'); // Image dans la popup
-    const closePopup = document.getElementById('close-popup'); // Bouton pour fermer la popup
-    const refDoc = document.querySelector('.buttondoc[href^="consult"]'); // Bouton de consultation
-    const refDownload = document.querySelector('.buttondoc[href^="download"]'); // Bouton de téléchargeme
+    const popupSummary = document.getElementById('popup-summary'); // Résumé
+    const popupImage = document.getElementById('popup-image'); // Image
+    const closePopup = document.getElementById('close-popup'); // Bouton de fermeture
+    const refDoc = document.querySelector('.buttondoc.consult'); // Bouton "Consulter"
+    const refDownload = document.querySelector('.buttondoc.download'); // Bouton "Télécharger"
 
-    // Parcourir chaque "realisation"
+    // Parcourir les projets
     rea.forEach(realisation => {
         const button = realisation.querySelector('button'); // Bouton "En savoir plus"
 
-        // Ajouter un gestionnaire de clic sur le bouton
         button.addEventListener('click', (event) => {
-            event.stopPropagation(); // Empêche le clic de remonter à la div parente
+            event.stopPropagation(); // Empêche les événements inutiles
 
-            // Récupérer les données de l'élément
-            const imageSrc = realisation.getAttribute('data-image'); // Image associée
-            const realisationText = realisation.querySelector('.summaryText').innerText; // Résumé
-            const refDocsingle = realisation.getAttribute('data-refdoc');
-            const refDownloadsingle = realisation.getAttribute('data-refdownload');
+            // Récupérer les données spécifiques
+            const imageSrc = realisation.getAttribute('data-image');
+            const summary = realisation.getAttribute('data-summary');
+            const docURL = realisation.getAttribute('data-refdoc');
+            const downloadURL = realisation.getAttribute('data-refdownload');
 
-            // Ajouter le texte et l'image à la popup
-            popupSummary.innerText = realisationText;
-
-            if (refDoc) refDoc.href = refDocsingle || '#';
-            if (refDownload) refDownload.href = refDownloadsingle || '#';
-
+            // Ajouter les données à la popup
+            popupSummary.textContent = summary || 'Aucune information disponible';
 
             if (imageSrc) {
                 popupImage.src = imageSrc;
@@ -36,19 +31,36 @@ document.addEventListener('DOMContentLoaded', () => {
                 popupImage.style.display = 'none';
             }
 
+            // Configurer les liens
+            if (docURL) {
+                refDoc.href = docURL;
+                refDoc.style.display = 'inline-block';
+            } else {
+                refDoc.style.display = 'none';
+                refDoc.href = '#'; // Réinitialise au cas où
+            }
+
+            if (downloadURL) {
+                refDownload.href = downloadURL;
+                refDownload.style.display = 'inline-block';
+            } else {
+                refDownload.style.display = 'none';
+                refDownload.href = '#'; // Réinitialise au cas où
+            }
+
             // Afficher la popup
             popup.classList.add('active');
         });
     });
 
-    // Fermer la popup en cliquant sur le bouton de fermeture
+    // Bouton de fermeture
     closePopup.addEventListener('click', () => {
         popup.classList.remove('active');
     });
 
-    // Fermer la popup en cliquant en dehors de son contenu
+    // Fermer en cliquant en dehors
     window.addEventListener('click', (event) => {
-        if (!popupContent.contains(event.target)) {
+        if (!popupContent.contains(event.target) && !event.target.closest('.realisation')) {
             popup.classList.remove('active');
         }
     });
