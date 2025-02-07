@@ -17,6 +17,10 @@ h2{
     justify-items: center;
 }
 
+#contact{
+    text-align: center;
+}
+
 #contact a{
     display: inline-block;
     text-decoration: none;

@@ -222,7 +222,7 @@ body main ul li:hover .hidden-text {
 /* footer */
 
 footer {
-    text-align: center;
+    text-align: left;
     background-color: var(--bgcolor-header);
     color: var(--letter-color-default);
     line-height: 4.5rem;
