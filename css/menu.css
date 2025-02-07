@@ -24,7 +24,7 @@ main {
 }
 
 footer {
-    text-align: left;
+    text-align: center;
     background-color: var(--bgcolor-menu);
     color: var(--letter-color-default);
     line-height: 4.5rem;
