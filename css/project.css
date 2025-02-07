@@ -40,8 +40,8 @@ h2{
     box-shadow: 1rem 1rem 1rem rgba(0.3, 0.3, 0.3, 0.3);
     color: var(--bgcolor-list);
     background-color: var(--bgcolor-menu);
-    transition: transform 0.3s ease;
     text-align: center;
+    transition: background-color 1s ease-in-out;
 }
 
 .button{

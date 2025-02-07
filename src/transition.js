@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (progress >= 100) {
             clearInterval(loadingInterval);
             loader.style.display = "none";
-            content.style.display = "block";
         }
     }, 200); // Augmenter la progression toutes les 200 ms
 });

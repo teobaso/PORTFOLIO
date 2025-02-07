@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+
     closePopup.addEventListener('click', () => {
         popup.classList.remove('active');
     });
@@ -44,5 +45,66 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!popupContent.contains(event.target) && !event.target.classList.contains('point')) {
             popup.classList.remove('active');
         }
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const points = document.querySelectorAll('.point');
+
+    points.forEach(point => {
+        const tooltip = point.querySelector('.tooltip');
+
+        // Cacher le tooltip par défaut
+        tooltip.style.visibility = 'hidden';
+        tooltip.style.opacity = 0;
+
+        point.addEventListener('mouseover', () => {
+            const image1 = point.getAttribute('data-image1');
+            const image2 = point.getAttribute('data-image2');
+            const summaryText = point.querySelector('.summaryText').innerText;
+
+            // Récupérer le titre du tooltip avant de vider son contenu
+            const tooltipTitle = tooltip.getAttribute('data-title') || tooltip.innerText;
+
+            // Tronquer le texte si trop long
+            const truncatedText = summaryText.length > 50 ? summaryText.substring(0, 50) + '...' : summaryText;
+
+            // Construire le contenu du tooltip
+            tooltip.innerHTML = `<h3><strong>${tooltipTitle}</strong></h3>`;
+
+            if (image1 || image2) {
+                tooltip.innerHTML += `<img src="${image1 || image2}" alt="Image" style="max-width: 8rem;"> ${truncatedText}`;
+            } else {
+                tooltip.innerHTML += truncatedText;
+            }
+
+            // Récupérer les dimensions du tooltip
+            const tooltipWidth = tooltip.offsetWidth;
+
+            // Positionner le tooltip
+            const pointRect = point.getBoundingClientRect();
+            const windowWidth = window.innerWidth;
+
+            // Calculer l'espace disponible
+            const spaceRight = windowWidth - pointRect.right;
+            const spaceLeft = pointRect.left;
+
+            // Placement du tooltip
+            if (spaceRight > tooltipWidth) {
+                tooltip.style.left = `${pointRect.width + tooltipWidth / 2}px`;  // Afficher à droite
+            } else if (spaceLeft > tooltipWidth) {
+                tooltip.style.left = `${pointRect.width - tooltipWidth / 2 - 50}px`;  // Afficher à droite
+            }
+
+            // Afficher le tooltip
+            tooltip.style.visibility = 'visible';
+            tooltip.style.opacity = 1;
+        });
+
+        point.addEventListener('mouseleave', () => {
+            tooltip.style.visibility = 'hidden';
+            tooltip.style.opacity = 0;
+        });
     });
 });

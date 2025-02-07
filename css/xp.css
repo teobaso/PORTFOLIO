@@ -33,15 +33,21 @@ h1{
 
 .tooltip {
     position: absolute;
-    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 0.5rem 1rem;
     white-space: nowrap;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s;
+    background-color: var(--theme-bg-color);
+    border-radius: 2rem;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
 }
 
 .path {
@@ -69,9 +75,9 @@ path {
     transform: translate(-50%, -50%);
     width: 60%;
     background-color: var(--bgcolor-menu);
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    padding: 20px;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    padding: 2rem;
 }
 
 .popup.active {
@@ -88,7 +94,7 @@ path {
 
 .popup-images img {
     max-width: 75%;
-    border-radius: 10px;
+    border-radius: 1rem;
 }
 
 #popup-image2{
@@ -98,8 +104,8 @@ path {
 
 #close-popup {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 1rem;
+    right: 1rem;
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
@@ -111,8 +117,8 @@ path {
 
 .close {
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 1rem;
+    right: 1rem;
     background-color: var(--bgcolor-list);
     color: var(--bgcolor-header);
     border: none;
