@@ -44,7 +44,7 @@ img{
 }
 
 
-.text-certif {
+.text-certif{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -73,7 +73,7 @@ img{
 
 @media screen and (max-width: 76.8rem) {
     *{
-        overflow-y: visible;
+        overflow: visible;
     }
     .certif{
         display: flex;
@@ -82,9 +82,14 @@ img{
     }
 
     .case {
-        max-height: 35rem;
-        max-width: 35rem;
+        max-height: 30rem;
+        max-width: 30rem;
         justify-content: center;
+    }
+
+    img{
+        max-width: 10rem;
+        max-height: 10rem;
     }
 
     #secnum{

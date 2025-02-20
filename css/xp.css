@@ -146,3 +146,10 @@ path {
     height: 100%;
 }
 
+
+@media (hover: none) {
+    .point:hover .tooltip{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
