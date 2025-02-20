@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
     const loader = document.getElementById("loader");
-    const content = document.getElementById("content");
     const progressBar = document.querySelector(".progress-bar .progress");
 
     // Simuler un chargement progressif
@@ -16,3 +15,27 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }, 200); // Augmenter la progression toutes les 200 ms
 });
+
+
+function hasTouch() {
+    return 'ontouchstart' in document.documentElement
+        || navigator.maxTouchPoints > 0
+        || navigator.msMaxTouchPoints > 0;
+}
+
+if (hasTouch()) { // remove all the :hover stylesheets
+    try { // prevent exception on browsers not supporting DOM styleSheets properly
+        for (let si in document.styleSheets) {
+            let styleSheet = document.styleSheets[si];
+            if (!styleSheet.rules) continue;
+
+            for (let ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+                if (!styleSheet.rules[ri].selectorText) continue;
+
+                if (styleSheet.rules[ri].selectorText.match(':hover')) {
+                    styleSheet.deleteRule(ri);
+                }
+            }
+        }
+    } catch (ex) {}
+}

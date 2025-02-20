@@ -67,6 +67,10 @@ img{
     opacity: 1;
 }
 
+.button{
+    display: none;
+}
+
 @media screen and (max-width: 76.8rem) {
     *{
         overflow: visible;
@@ -85,5 +89,19 @@ img{
 
     #secnum{
         margin-bottom: 3rem;
+    }
+
+    .button{
+        display: block;
+        margin: 1rem auto;
+        text-align: center;
+        background-color: var(--theme-bg-color);
+        color: var(--letter-color-default);
+        border: none;
+        border-radius: 5rem;
+        width: 15rem;
+        font-weight: bold;
+        font-size: small;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
     }
 }
