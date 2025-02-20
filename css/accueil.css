@@ -136,7 +136,7 @@ body main ul li::before {
 
 #me::before {
     background-image: url("../asset/me.png");
-    content: "À propos de moi";
+    content: "A propos de moi";
 }
 
 body main ul li:hover {
@@ -270,7 +270,17 @@ footer {
 }
 
 @media (hover: none) {
-    *:hover {
-        all: unset !important;
+    .menu li:hover {
+        transform: none !important;
+        z-index: inherit;
+    }
+
+    .menu li:hover::before {
+        filter: none !important;
+    }
+
+    /* Empêche l'affichage du texte flou */
+    .menu li:hover .hidden-text {
+        opacity: 0 !important;
     }
 }

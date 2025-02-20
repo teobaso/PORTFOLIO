@@ -269,10 +269,3 @@ body {
         transform: rotate(-45deg);
     }
 }
-
-
-@media (hover: none) {
-    *:hover {
-        all: unset !important;
-    }
-}

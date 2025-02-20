@@ -73,7 +73,7 @@ img{
 
 @media screen and (max-width: 76.8rem) {
     *{
-        overflow: visible;
+        overflow-y: visible;
     }
     .certif{
         display: flex;
@@ -103,5 +103,24 @@ img{
         font-weight: bold;
         font-size: small;
         box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    }
+}
+
+
+@media (hover: none) {
+    /* Désactive uniquement le flou au hover */
+    .case:hover img,
+    .case:hover span {
+        filter: none !important;
+    }
+
+    .case:hover {
+        transform: none !important;
+        z-index: inherit;
+    }
+
+    /* Empêche l'affichage du texte flou */
+    .case:hover .text-certif {
+        opacity: 0 !important;
     }
 }
