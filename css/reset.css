@@ -9,6 +9,8 @@
     --bgcolor-header : rgb(179, 154, 120);
     --bgcolor-menu : rgb(166, 123, 91);
     --bgcolor-list : rgb(223, 230, 233);
+    --scrollbar-hover : rgb(117, 80, 46);
+    --scrollbar : rgb(214, 165, 117);;
 }
 
 /* reset : mettre à 0 toutes les propriété du navigateur */

@@ -9,6 +9,7 @@ h2{
 
 .aboutme{
     margin: 1.5rem 5rem;
+    padding: 0 0 0.5rem 0;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
     border-radius: 1.5rem;
 }
@@ -39,21 +40,23 @@ i:hover {
 
 
 body main div p {
-    text-align: justify;
+    text-align: inherit;
     margin: 0.5rem 2.5rem;
 }
 
 .button {
-    margin: 1rem 42.5%;
-    background-color: var(--bgcolor-menu);
-    border-radius: 1.5rem;
-    text-decoration: none;
-    color: var(--theme-text-color);
-    display: inline-block; /* Cela permet de donner une apparence de bouton au lien */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
     width: 15%;
     text-align: center;
     font-weight: 500;
     font-style: italic;
+    background-color: var(--bgcolor-menu);
+    border-radius: 1.5rem;
+    text-decoration: none;
+    color: var(--theme-text-color);
 }
 
 .button:hover {
@@ -62,22 +65,24 @@ body main div p {
 }
 
 .buttoncv{
+    display: flex;
+    justify-content: center;
     align-items: center;
     background-color: var(--bgcolor-menu);
     text-decoration: none;
-    border-radius: 3rem;
+    border-radius: 1.5rem;
+    margin: 1rem 0;
     color: var(--theme-text-color);
-    margin: 1rem 0 1rem 25%;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem;
     text-align: center;
     font-weight: 500;
     font-style: italic;
+    width: 30%;
 }
 
 .cv{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: 90%;
+    display: flex;
+    justify-content: space-around;
     padding: 0.1rem;
 }
 
@@ -102,4 +107,26 @@ body main div p {
 
 .buttoncv:hover {
     color: var(--theme-bg-color);
+}
+
+@media screen and (max-width: 76.8rem) {
+    .button{
+        width: 15rem;
+        font-size: smaller;
+        font-weight: 300;
+        margin-top: 1rem;
+    }
+
+    .buttoncv{
+        width: 20rem;
+        font-size: smaller;
+        font-weight: 300;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .cv{
+        flex-direction: column;
+        align-items: center;
+    }
 }

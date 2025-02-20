@@ -4,6 +4,27 @@
     font-family: "Montserrat", sans-serif;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--theme-text-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(104, 71, 39);
+    border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(214, 165, 117);
+}
+
 header {
     background-color: var(--bgcolor-menu);
     padding: 2rem 0 2rem;
@@ -151,4 +172,100 @@ body {
     width: 0;
     background: var(--bgcolor-menu);
     transition: width 0.3s ease;
+}
+
+#menu-btn{
+    display: none;
+}
+
+.logomenu{
+    display: none;
+}
+
+
+/* 🌍 Responsive pour mobile */
+@media screen and (max-width: 76.8rem) {
+    /* Cache le menu par défaut */
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 6rem;
+        left: 0;
+        width: 100%;
+        background-color: var(--bgcolor-menu);
+        padding: 1rem 0;
+    }
+
+    .menu li {
+        width: 100%;
+        margin-top: 1rem;
+        background-color: var(--bgcolor-menu);
+    }
+
+    .menu li:hover {
+        background-color: var(--theme-bg-color);
+    }
+
+    .logomenu {
+        display: inline-block;
+    }
+    /* Affiche le menu lorsqu'il est actif */
+    .menu.active {
+        display: flex;
+    }
+
+    /* Style du menu burger */
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        right: 2rem;
+        top: 2rem;
+        margin-top: 1rem;
+        z-index: 101;
+    }
+
+    .navicon {
+        background: white;
+        display: block;
+        width: 3rem;
+        height: 0.3rem;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .navicon:before,
+    .navicon:after {
+        content: "";
+        background: white;
+        display: block;
+        width: 3rem;
+        height: 0.3rem;
+        position: absolute;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .navicon:before {
+        top: -0.8rem;
+    }
+
+    .navicon:after {
+        top: 0.8rem;
+    }
+
+    /* Effet croix lorsqu'on clique sur le menu */
+    .menu-btn:checked ~ .menu-icon .navicon {
+        background: transparent;
+    }
+
+    .menu-btn:checked ~ .menu-icon .navicon:before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    .menu-btn:checked ~ .menu-icon .navicon:after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
 }

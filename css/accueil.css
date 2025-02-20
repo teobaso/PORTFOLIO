@@ -7,6 +7,28 @@
     font-family: "Montserrat", sans-serif;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--theme-text-color);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar);
+    border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-hover);
+}
+
+
 header {
     background-color: var(--bgcolor-header);
     margin-top: 4rem;
@@ -84,7 +106,7 @@ body main ul li::before {
     transition: filter 0.3s ease, opacity 0.3s ease;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     color: rgba(255, 255, 255, 0.8);
     font-size: 2rem;
     text-align: center;
@@ -228,4 +250,22 @@ footer {
     line-height: 4.5rem;
 }
 
+@media screen and (max-width: 76.8rem) {
+    *{
+        overflow: visible;
+    }
+
+    .menu{
+        display: flex;
+        margin-top: 10rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu li {
+        width: 80%;
+        max-height: 30rem;
+        margin-top: -2rem;
+    }
+}
 
