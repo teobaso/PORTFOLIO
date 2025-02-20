@@ -203,10 +203,6 @@ body {
         background-color: var(--bgcolor-menu);
     }
 
-    .menu li:hover {
-        background-color: var(--theme-bg-color);
-    }
-
     .logomenu {
         display: inline-block;
     }
@@ -267,5 +263,11 @@ body {
     .menu-btn:checked ~ .menu-icon .navicon:after {
         top: 0;
         transform: rotate(-45deg);
+    }
+}
+
+@media (hover: none) {
+    .menu li:hover {
+        background-color: inherit !important;
     }
 }

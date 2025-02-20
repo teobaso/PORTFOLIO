@@ -73,7 +73,7 @@ img{
 
 @media screen and (max-width: 76.8rem) {
     *{
-        overflow: visible;
+        overflow-x: hidden;
     }
     .certif{
         display: flex;
