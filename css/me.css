@@ -112,15 +112,15 @@ body main div p {
 @media screen and (max-width: 76.8rem) {
     .button{
         width: 15rem;
-        font-size: smaller;
-        font-weight: 300;
+        font-size: small;
+        font-weight: bold;
         margin-top: 1rem;
     }
 
     .buttoncv{
         width: 20rem;
-        font-size: smaller;
-        font-weight: 300;
+        font-size: small;
+        font-weight: bold;
         justify-content: center;
         margin-top: 1rem;
     }

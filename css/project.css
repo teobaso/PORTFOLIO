@@ -155,10 +155,8 @@ h2{
 }
 
 .doc{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    max-width: 90%;
+    display: flex;
+    justify-content: space-around;
     padding: 0.1rem;
 }
 
@@ -183,4 +181,26 @@ h2{
 
 .buttondoc:hover {
     color: var(--letter-color-default);
+}
+
+@media screen and (max-width: 76.8rem) {
+    .button{
+        width: 15rem;
+        font-weight: bold;
+        font-size: small;
+        margin-top: 1rem;
+    }
+
+    .buttondoc{
+        width: 20rem;
+        font-weight: bold;
+        font-size: small;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .doc{
+        flex-direction: column;
+        align-items: center;
+    }
 }
