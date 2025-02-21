@@ -248,6 +248,9 @@ footer {
     background-color: var(--bgcolor-header);
     color: var(--letter-color-default);
     line-height: 4.5rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 @media screen and (max-width: 76.8rem) {
