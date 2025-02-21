@@ -209,6 +209,7 @@ body {
     /* Affiche le menu lorsqu'il est actif */
     .menu.active {
         display: flex;
+        transition: transform 0.5s ease-out, opacity 0.5s ease-out;
     }
 
     /* Style du menu burger */
