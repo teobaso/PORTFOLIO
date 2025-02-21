@@ -141,19 +141,6 @@ footer{
     }
 
 
-    #close-popup {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        border: none;
-        font-size: 1.5rem;
-        cursor: pointer;
-        background-color: var(--bgcolor-list);
-        color: var(--bgcolor-header);
-        border-radius: 100%;
-    }
-
-
     .close {
         position: absolute;
         top: 1rem;
@@ -168,6 +155,20 @@ footer{
         padding: 5px;
         font-size: 1.2rem;
     }
+
+
+    #close-popup {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        background-color: var(--bgcolor-list);
+        color: var(--bgcolor-header);
+        border-radius: 100%;
+    }
+
 
     .content {
         text-align: center;
