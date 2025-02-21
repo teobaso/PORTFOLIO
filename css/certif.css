@@ -88,14 +88,14 @@ footer{
     }
 
     .case {
-        max-height: 50rem;
-        max-width: 50rem;
+        max-height: 40rem;
+        max-width: 40rem;
         justify-content: center;
     }
 
     img{
-        max-width: 15rem;
-        max-height: 15rem;
+        max-width: 10rem;
+        max-height: 10rem;
     }
 
     #secnum{
