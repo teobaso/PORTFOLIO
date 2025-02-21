@@ -1,27 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const cases = document.querySelectorAll('.case'); // Sélectionne toutes les cases
+    const certification = document.querySelectorAll('.case'); // Tous les projets
     const popup = document.getElementById('popup'); // La popup
     const popupContent = document.querySelector('.popup-content'); // Contenu de la popup
-    const popupSummary = document.getElementById('popup-summary'); // Texte de la popup
+    const popupSummary = document.getElementById('popup-summary'); // Résumé
     const closePopup = document.getElementById('close-popup'); // Bouton de fermeture
 
-    function openPopup(summary) {
-        popupSummary.textContent = summary || 'Aucune information disponible';
-        popup.classList.add('active');
-    }
+    // Parcourir les projets
+    certification.forEach(certif => {
+        const button = certif.querySelector('button'); // Bouton "En savoir plus"
 
-    // Vérification que chaque case contient un bouton et un texte caché
-    cases.forEach(ca => {
-        const button = ca.querySelector('.button'); // Bouton "En savoir plus"
-        const summaryElement = ca.querySelector('.text-certif'); // Texte caché
+        button.addEventListener('click', (event) => {
+            event.stopPropagation(); // Empêche les événements inutiles
 
-        if (button && summaryElement) {
-            const summary = summaryElement.textContent.trim();
+            // Récupérer les données spécifiques
+            const summary = certif.querySelector('.text-certif')?.textContent.trim();
 
-            // Ajoute les événements pour ordinateur et mobile
-            button.addEventListener('click', () => openPopup(summary));
-            button.addEventListener('touchstart', () => openPopup(summary), { passive: true });
-        }
+            // Ajouter les données à la popup
+            popupSummary.textContent = summary || 'Aucune information disponible';
+
+            // Afficher la popup
+            popup.classList.add('active');
+        });
     });
 
     // Bouton de fermeture
@@ -29,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         popup.classList.remove('active');
     });
 
-    // Fermer en cliquant en dehors de la popup
+    // Fermer en cliquant en dehors
     window.addEventListener('click', (event) => {
         if (!popupContent.contains(event.target) && !event.target.closest('.case')) {
             popup.classList.remove('active');
