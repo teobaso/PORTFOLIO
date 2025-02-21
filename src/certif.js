@@ -5,24 +5,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const popupSummary = document.getElementById('popup-summary'); // Texte de la popup
     const closePopup = document.getElementById('close-popup'); // Bouton de fermeture
 
+    function openPopup(summary) {
+        popupSummary.textContent = summary || 'Aucune information disponible';
+        popup.classList.add('active');
+    }
+
     // Vérification que chaque case contient un bouton et un texte caché
     cases.forEach(ca => {
         const button = ca.querySelector('.button'); // Bouton "En savoir plus"
         const summaryElement = ca.querySelector('.text-certif'); // Texte caché
 
         if (button && summaryElement) {
-            button.addEventListener('click', (event) => {
-                event.stopPropagation(); // Empêche la propagation de l'événement
+            const summary = summaryElement.textContent.trim();
 
-                // Récupérer le texte de la certification
-                const summary = summaryElement.textContent.trim();
-
-                // Ajouter les données à la popup
-                popupSummary.textContent = summary || 'Aucune information disponible';
-
-                // Afficher la popup
-                popup.classList.add('active');
-            });
+            // Ajoute les événements pour ordinateur et mobile
+            button.addEventListener('click', () => openPopup(summary));
+            button.addEventListener('touchstart', () => openPopup(summary), { passive: true });
         }
     });
 
