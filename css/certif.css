@@ -167,6 +167,10 @@ footer{
         margin-bottom: 3rem;
     }
 
+    footer{
+        position: unset;
+    }
+
 }
 
 
