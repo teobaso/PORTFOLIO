@@ -67,10 +67,6 @@ img{
     opacity: 1;
 }
 
-.button{
-    display: none;
-}
-
 footer{
     position: fixed;
     width: 100%;
@@ -141,6 +137,21 @@ footer{
     height: 100%;
 }
 
+.button {
+    display: none;
+    margin: 1rem auto;
+    text-align: center;
+    background-color: var(--theme-bg-color);
+    color: var(--letter-color-default);
+    border: none;
+    border-radius: 5rem;
+    width: 15rem;
+    font-weight: bold;
+    font-size: small;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
 
 @media screen and (max-width: 76.8rem) {
     *{
@@ -187,18 +198,12 @@ footer{
         max-height: 5rem;
     }
 
-    .button {
-        display: block;
-        margin: 1rem auto;
-        text-align: center;
-        background-color: var(--theme-bg-color);
-        color: var(--letter-color-default);
-        border: none;
-        border-radius: 5rem;
-        width: 15rem;
-        font-weight: bold;
-        font-size: small;
-        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
-        cursor: pointer;
+    .text-certif{
+        display: none;
     }
+
+    .button{
+        display: block !important;
+    }
+
 }

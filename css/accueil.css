@@ -30,7 +30,7 @@
 
 
 header {
-    background-color: var(--bgcolor-header);
+    background-color: var(--theme-bg-color);
     margin-top: 4rem;
     margin-bottom: -4rem;
     margin-left: 25%;
@@ -245,7 +245,7 @@ body main ul li:hover .hidden-text {
 
 footer {
     text-align: center;
-    background-color: var(--bgcolor-header);
+    background-color: var(--theme-bg-color);
     color: var(--letter-color-default);
     line-height: 4.5rem;
     position: fixed;
@@ -256,6 +256,11 @@ footer {
 @media screen and (max-width: 76.8rem) {
     *{
         overflow: visible;
+    }
+
+    h1{
+        font-weight: bold;
+        font-size: 2rem !important;
     }
 
     .menu{
