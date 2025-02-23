@@ -57,6 +57,7 @@ body main div p {
     border-radius: 1.5rem;
     text-decoration: none;
     color: var(--theme-text-color);
+    transition: 0.3s;
 }
 
 .button:hover {
@@ -78,6 +79,7 @@ body main div p {
     font-weight: 500;
     font-style: italic;
     width: 30%;
+    transition: 0.3s;
 }
 
 .cv{
@@ -128,5 +130,29 @@ body main div p {
     .cv{
         flex-direction: column;
         align-items: center;
+    }
+}
+
+@media (hover: none){
+    .button:hover {
+        background-color: var(--bgcolor-menu);
+        color: var(--theme-text-color);
+    }
+
+    i:hover {
+        color: var(--bgcolor-menu);
+    }
+
+    .buttoncv:hover .path-color{
+        fill: var(--theme-text-color);
+    }
+
+    .buttoncv:hover {
+        background-color: var(--bgcolor-menu);
+        color: var(--theme-text-color);
+    }
+
+    .buttoncv:hover {
+        color: var(--theme-text-color);
     }
 }
