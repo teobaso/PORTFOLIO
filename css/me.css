@@ -7,6 +7,12 @@ h2{
     margin: 1rem 1rem 0;
 }
 
+h3{
+    font-weight: 600;
+    font-style: italic;
+    margin: 0.5rem 2.5rem;
+}
+
 .aboutme{
     margin: 1.5rem 5rem;
     padding: 0 0 0.5rem 0;
@@ -42,6 +48,21 @@ i:hover {
 body main div p {
     text-align: inherit;
     margin: 0.5rem 2.5rem;
+}
+
+#organi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem 0 2rem 0;
+}
+
+body main div img {
+    width: 55rem;
+    height: auto; /* Évite la déformation */
+    display: block; /* Assure que margin: auto fonctionne */
+    margin: auto; /* Centre l'image */
+    max-width: 100%; /* Évite le dépassement sur petits écrans */
 }
 
 .button {
