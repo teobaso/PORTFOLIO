@@ -66,6 +66,12 @@ h1{
     margin-bottom: 2rem;
 }
 
+h2 {
+    margin: 1rem 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
 body header ul li {
     background-color: var(--theme-bg-color);
     position: relative;
@@ -84,22 +90,18 @@ body header ul li:hover {
     background-color: var(--bgcolor-list);
 }
 
-/*body header ul li a:hover {*/
-/*    color: var(--bgcolor-menu);*/
-/*}*/
-
 body main {
     padding-top: 8rem;
 }
 
 body {
     background: linear-gradient(
-        to bottom,
-        rgba(210, 180, 140, 1) 0%,   /* Tan */
-        rgba(222, 195, 157, 1) 25%,  /* Beige légèrement plus clair */
-        rgba(232, 206, 168, 1) 50%,  /* Beige doux */
-        rgba(225, 205, 172, 1) 75%,  /* Beige moyen */
-        rgba(215, 190, 150, 1) 100%  /* Retour à une teinte légèrement plus foncée */
+            to bottom,
+            rgba(210, 180, 140, 1) 0%,   /* Tan */
+            rgba(222, 195, 157, 1) 25%,  /* Beige légèrement plus clair */
+            rgba(232, 206, 168, 1) 50%,  /* Beige doux */
+            rgba(225, 205, 172, 1) 75%,  /* Beige moyen */
+            rgba(215, 190, 150, 1) 100%  /* Retour à une teinte légèrement plus foncée */
     ) no-repeat fixed;
     background-size: cover; /* Couvre tout l'écran */
     color: var(--letter-color-default);
@@ -181,6 +183,110 @@ body {
 
 .logomenu{
     display: none;
+}
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    z-index: 555;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 60%;
+    background-color: var(--bgcolor-menu);
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    overflow: hidden; /* Désactiver le scroll sur l'ensemble de la popup */
+}
+
+
+.popup.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Contenu de la popup */
+.popup-content {
+    max-width: 100%;
+    max-height: 70vh; /* Définit une hauteur max pour éviter que la popup dépasse l'écran */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; /* Pas de scroll ici */
+}
+
+/* Conteneur d'images */
+.popup-images {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.popup-images img {
+    max-width: 75%;
+    border-radius: 1rem;
+}
+
+#popup-image2 {
+    max-width: 35%;
+}
+
+.content {
+    text-align: left; /*CENTER ?*/
+    margin-top: 1.5rem;
+    color: var(--bgcolor-list);
+}
+
+/* Bouton de fermeture */
+.close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    height: 3rem;
+    width: 3rem;
+    background-color: var(--bgcolor-list);
+    color: var(--bgcolor-header);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Texte de la popup uniquement scrollable */
+#popup-summary {
+    max-height: 40vh; /* Hauteur limitée */
+    overflow-y: auto; /* Scroll uniquement si le texte est trop long */
+    line-height: 1.4;
+    width: 100%;
+}
+
+.summaryText{
+    display: none;
+    max-width: 90%;
+}
+
+.competences {
+    display: none;
+    margin-bottom: 1rem;
+}
+
+ul.competences {
+    list-style-type: disc;  /* Affiche les bullet points */
+    margin-left: 2rem;      /* Ajoute un espace à gauche */
+    padding-left: 1.5rem;
+    display: block !important; /* S'assurer que la liste est visible */
+}
+
+ul.competences li {
+    margin-bottom: 0.5rem;  /* Espacement entre les éléments */
 }
 
 

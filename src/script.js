@@ -12,11 +12,16 @@ document.addEventListener('DOMContentLoaded', () => {
             const image1 = point.getAttribute('data-image1');
             const image2 = point.getAttribute('data-image2');
 
-            // Afficher le texte de la balise <p> dans la popup
-            let summaryText;
-            summaryText = point.querySelector('.summaryText').innerText;
-            popupSummary.innerHTML = summaryText;
+            // Récupérer tous les éléments .summaryText et concaténer leur contenu
+            let summaryText = Array.from(point.querySelectorAll('.summaryText'))
+                .map(el => el.innerHTML)
+                .join('<br><br>'); // Ajoute une séparation entre les paragraphes
 
+            if (popupSummary) {
+                popupSummary.innerHTML = summaryText;
+            } else {
+                console.error("popupSummary n'existe pas !");
+            }
             if (image1) {
                 popupImage1.src = image1;
                 popupImage1.style.display = 'block';
@@ -34,6 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             popup.classList.add('active');
         });
     });
+
 
 
     closePopup.addEventListener('click', () => {
