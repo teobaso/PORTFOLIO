@@ -8,6 +8,15 @@ h2{
     gap: 2rem;
 }
 
+h3{
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    gap: 2rem;
+}
+
 .projet {
     display: flex; /* Active Flexbox */
     flex-wrap: wrap; /* Permet de passer sur plusieurs lignes si nécessaire */
