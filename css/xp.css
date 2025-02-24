@@ -72,3 +72,14 @@ path {
     }
 }
 
+@media screen and (max-width: 75.6rem){
+    #popup-image2 {
+        max-width: 75%;
+    }
+    #popup-image1 {
+        max-width: 50%;
+    }
+}
+
+
+
