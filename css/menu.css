@@ -195,7 +195,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%) scale(0.8);
     width: 60%;
-    height: 70%;
     background-color: var(--bgcolor-menu);
     border-radius: 1rem;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);

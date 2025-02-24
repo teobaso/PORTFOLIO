@@ -66,6 +66,10 @@ path {
     stroke-dasharray: 5, 5;
 }
 
+.popup{
+    height: 70%;
+}
+
 @media (hover: none), (pointer: coarse) {
     .point:hover .tooltip {
         display: none !important;
