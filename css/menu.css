@@ -262,7 +262,7 @@ body {
 
 /* Texte de la popup uniquement scrollable */
 #popup-summary {
-    max-height: 60vh; /* Hauteur limitée */
+    max-height: 40vh; /* Hauteur limitée */
     overflow-y: auto; /* Scroll uniquement si le texte est trop long */
     line-height: 1.4;
     width: 100%;

@@ -66,9 +66,14 @@ path {
     stroke-dasharray: 5, 5;
 }
 
-.popup{
+.popup {
     height: 70%;
 }
+
+#popup-summary {
+    max-height: 60vh;
+}
+
 
 @media (hover: none), (pointer: coarse) {
     .point:hover .tooltip {
