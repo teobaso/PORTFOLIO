@@ -17,13 +17,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Récupérer les données spécifiques
             const imageSrc = realisation.getAttribute('data-image');
-            const summary = realisation.getAttribute('data-summary');
             const docURL = realisation.getAttribute('data-refdoc');
             const downloadURL = realisation.getAttribute('data-refdownload');
+            const title3 = document.querySelector('.title');
 
             // Ajouter les données à la popup
-            popupSummary.textContent = summary || 'Aucune information disponible';
+            let summaryText = Array.from(realisation.querySelectorAll('.summaryText'))
+                .map(el => el.innerHTML)
+                .join('<br><br>'); // Ajoute une séparation entre les paragraphes
 
+            if (summaryText.trim() === "") {
+                summaryText = "Aucune information disponible";
+            }
+
+            if (popupSummary) {
+                popupSummary.innerHTML = summaryText;
+            } else {
+                console.error("popupSummary n'existe pas !");
+            }
+            if (title3) {
+                popupSummary.src = title3;
+                popupSummary.style.display = 'block';
+            } else {
+                popupSummary.style.display = 'none';
+            }
             if (imageSrc) {
                 popupImage.src = imageSrc;
                 popupImage.style.display = 'block';

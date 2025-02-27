@@ -67,6 +67,7 @@ body main div img {
     display: block; /* Assure que margin: auto fonctionne */
     margin: auto; /* Centre l'image */
     max-width: 100%; /* Évite le dépassement sur petits écrans */
+    border-radius: 2rem;
 }
 
 .button {
