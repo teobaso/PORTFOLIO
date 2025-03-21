@@ -69,6 +69,21 @@ h4{
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
 }
 
+.link{
+    text-decoration: none;
+    margin: 1rem auto;
+    text-align: center;
+    font-size: small;
+    font-weight: lighter;
+    width: 11rem;
+    background-color: var(--theme-bg-color);
+    color: var(--letter-color-default);
+    border: none;
+    border-radius: 5rem;
+    cursor: pointer;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+}
+
 
 .buttondoc{
     align-items: center;

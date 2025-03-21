@@ -13,17 +13,6 @@ h3{
     margin: 0.5rem 2.5rem;
 }
 
-.aboutme{
-    margin: 1.5rem 5rem;
-    padding: 0 0 0.5rem 0;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
-    border-radius: 1.5rem;
-}
-
-.aboutme a{
-    justify-items: center;
-}
-
 #contact{
     text-align: center;
 }
@@ -91,71 +80,12 @@ body main div img {
     color: var(--theme-bg-color);
 }
 
-.buttoncv{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--bgcolor-menu);
-    text-decoration: none;
-    border-radius: 1.5rem;
-    margin: 1rem 0;
-    color: var(--theme-text-color);
-    padding: 0.5rem;
-    text-align: center;
-    font-weight: 500;
-    font-style: italic;
-    width: 30%;
-    transition: 0.3s;
-}
-
-.cv{
-    display: flex;
-    justify-content: space-around;
-    padding: 0.1rem;
-}
-
-.svg-icon{
-    max-height: 1.5rem;
-    max-width: 1.5rem;
-}
-
-.path-color{
-    fill: var(--theme-text-color);
-}
-
-.buttoncv:hover .path-color{
-    fill: currentColor;
-}
-
-.buttoncv:hover {
-    background-color: var(--theme-text-color);
-    color: var(--theme-bg-color);
-}
-
-
-.buttoncv:hover {
-    color: var(--theme-bg-color);
-}
-
 @media screen and (max-width: 76.8rem) {
     .button{
         width: 15rem;
         font-size: small;
         font-weight: bold;
         margin-top: 1rem;
-    }
-
-    .buttoncv{
-        width: 20rem;
-        font-size: small;
-        font-weight: bold;
-        justify-content: center;
-        margin-top: 1rem;
-    }
-
-    .cv{
-        flex-direction: column;
-        align-items: center;
     }
 
     body main div img {
@@ -177,18 +107,5 @@ body main div img {
 
     i:hover {
         color: var(--bgcolor-menu);
-    }
-
-    .buttoncv:hover .path-color{
-        fill: var(--theme-text-color);
-    }
-
-    .buttoncv:hover {
-        background-color: var(--bgcolor-menu);
-        color: var(--theme-text-color);
-    }
-
-    .buttoncv:hover {
-        color: var(--theme-text-color);
     }
 }

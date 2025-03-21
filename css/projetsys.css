@@ -1,0 +1,5 @@
+@import url("./menu.css");
+
+header li {
+    width: 24.5rem !important;
+}
