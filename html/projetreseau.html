@@ -39,6 +39,31 @@
 <main>
     <div class="aboutme">
         <h1>Mon projet réseau</h1>
+        <h2>Contexte</h2>
+        <div class="paragraph">
+            Pour le projet réseau de M2L, nous devons interconnecter efficacement deux sites tout en assurant la sécurité et la segmentation des flux.
+
+            <br><strong>OSPF (Open Shortest Path First) :</strong>
+            <ul>
+                <li>
+                    Utilisé pour le routage dynamique entre les deux sites, offrant une convergence rapide et une évolutivité.
+                </li>
+                <li>
+                    La division en deux zones OSPF optimise le routage et la gestion des flux entre les sites.
+                </li>
+            </ul>
+            <strong>VLANs (Virtual Local Area Networks) et Routage Inter-VLAN :</strong>
+            <ul>
+                <li>
+                    Mise en place de VLANs pour isoler les trafics des ligues de badminton, volley, escrime et de l'administration.
+                </li>
+                <li>
+                    Le routage inter-VLAN permet la communication contrôlée entre ces VLANs, assurant sécurité et organisation.
+                </li>
+            </ul>
+
+            Cette architecture combine routage dynamique et segmentation logique pour un réseau performant, sécurisé et évolutif, répondant aux besoins de communication et de sécurité de M2L.
+        </div>
         <div class="cv">
             <a href="../asset/document/CV_BASOL_Teo.pdf" class="buttoncv" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-icon">

@@ -39,6 +39,63 @@
 <main>
     <div class="aboutme">
         <h1>Mon projet système</h1>
+        <h2>Contexte</h2>
+        <div class="paragraph">
+            L'entreprise M2L souhaite moderniser son infrastructure informatique pour garantir la continuité de service, la sécurité et la supervision efficace de son réseau.
+
+            <br><strong>Situation et Besoins</strong>
+            <ul>
+                <li>
+                    Haute Disponibilité : Les services critiques doivent rester accessibles en cas de panne matérielle ou logicielle.
+                </li>
+                <li>
+                    Segmentation Réseau : Différents types de trafic (clients, serveurs, supervision, administration) doivent être isolés pour des raisons de sécurité et de performance.
+                </li>
+                <li>
+                    Supervision Centralisée : Un outil de supervision performant est nécessaire pour surveiller l'état du réseau et des serveurs.
+                </li>
+                <li>
+                    Sécurité Renforcée : L'accès à l'outil de supervision doit être strictement contrôlé pour éviter toute manipulation malveillante.
+                </li>
+                <li>
+                    Authentification Centralisée : L'authentification des utilisateurs doit être gérée de manière centralisée pour simplifier l'administration et renforcer la sécurité.
+                </li>
+            </ul>
+            <strong>Choix Technologiques et Justifications</strong>
+
+            <ol>
+                <li>
+                    Architecture en Haute Disponibilité :
+                    <p>
+                        La mise en place de clusters de serveurs ou de solutions de virtualisation avec redondance permet d'assurer la continuité de service en cas de défaillance.
+                        <br>Cela garantit que les applications et les données critiques restent accessibles aux utilisateurs.
+                    </p>
+                </li>
+                <li>
+                    Segmentation en VLANs :
+                    <p>
+                        La création de VLANs distincts pour les clients, les serveurs, Zabbix et l'administration permet d'isoler les trafics et d'améliorer la sécurité.
+                        <br>Chaque VLAN a ses propres règles de sécurité et ses propres ressources, ce qui réduit les risques de propagation d'attaques.
+                    </p>
+                </li>
+                <li>
+                    Intégration de Zabbix à l'Active Directory (AD) :
+                    <p>
+                        L'intégration de Zabbix à l'AD permet de centraliser l'authentification des utilisateurs et de simplifier la gestion des accès.
+                        <br>Seuls les utilisateurs autorisés peuvent accéder à l'interface de Zabbix, ce qui renforce la sécurité de l'outil de supervision.
+                    </p>
+                </li>
+                <li>
+                    VLAN d'Administration Dédié :
+                    <p>
+                        La création d'un VLAN d'administration dédié, isolé des autres VLANs, permet de contrôler strictement l'accès au serveur Zabbix.
+                        <br>Seuls les administrateurs réseau peuvent accéder à ce VLAN, ce qui réduit les risques de manipulation malveillante de l'outil de supervision.
+                    </p>
+                </li>
+            </ol>
+
+            Cette architecture système combine haute disponibilité, segmentation réseau et sécurité renforcée pour garantir la continuité de service, la protection des données et la supervision efficace du réseau de M2L.
+        </div>
         <div class="cv">
             <a href="../asset/document/CV_BASOL_Teo.pdf" class="buttoncv" target="_blank">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-icon">

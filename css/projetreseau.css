@@ -3,3 +3,22 @@
 header li {
     width: 24.5rem !important;
 }
+
+h2{
+    margin-left: 2rem;
+}
+
+.paragraph{
+    margin: 1rem 2rem;
+}
+
+.paragraph ul {
+    list-style-type: circle;  /* Affiche les bullet points */
+    margin-left: 2rem;      /* Ajoute un espace à gauche */
+    padding-left: 1.5rem;
+    display: block !important; /* S'assurer que la liste est visible */
+}
+
+.paragraph ul li {
+    margin-bottom: 0.5rem;  /* Espacement entre les éléments */
+}
