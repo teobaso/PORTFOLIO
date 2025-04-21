@@ -133,38 +133,82 @@
 
             </div>
         </div>
-        <div class="realisation" data-summary="" data-image="" data-refdoc="" data-refdownload="">
+        <div class="realisation" data-summary="" data-image="" data-refdoc="../asset/document/Compte Rendu - HD Pfsense - Teo BASOL.pdf" data-refdownload="../asset/document/Compte Rendu - HD Pfsense - Teo BASOL.pdf">
             <span>Mise en place d'une haute disponibilité avec Pfsense</span>
             <button class="button">En savoir plus</button>
             <div class="summaryText">
-                <h3 class="title"></h3>
+                <h3 class="title">Mise en œuvre d'une architecture redondante pour la haute disponibilité avec pfSense</h3>
                 <p>
-                    En cours de traitement
+                    Ce compte rendu détaille le processus d'implémentation d'une solution de Haute Disponibilité (HD) utilisant deux pare-feu pfSense. Les étapes initiales comprennent la configuration réseau de chaque pfSense, suivie de la mise en place des adresses IP virtuelles (VIP) avec CARP, la configuration du service DHCP pour utiliser la VIP, la synchronisation des états et de la configuration entre les deux pfSense, et enfin, les tests de basculement pour valider la redondance.
+                </p>
+
+                <h4>Choix techniques et démarche :</h4>
+                <ul class="competences">
+                    <li><strong>Configuration réseau avec pfSense :</strong> Utilisation de pfSense pour une configuration réseau avancée avec trois interfaces (LAN, OPT1) sur chaque pare-feu.</li>
+                    <li><strong>Adresses IP virtuelles (VIP) et CARP :</strong> Implémentation de CARP pour la redondance des adresses IP, assurant une adresse IP virtuelle partagée entre les deux pfSense.</li>
+                    <li><strong>Configuration du service DHCP :</strong>  Configuration du serveur DHCP pour utiliser l'adresse IP virtuelle comme passerelle par défaut.</li>
+                    <li><strong>Synchronisation pfsync et XMLRPC :</strong> Synchronisation des états de connexion (pfsync) et de la configuration (XMLRPC) entre les deux pare-feu pfSense.</li>
+                    <li><strong>Règles de pare-feu pour la HD :</strong> Création de règles de pare-feu pour autoriser le trafic de synchronisation entre les pfSense.</li>
+                </ul>
+
+                <h4>Défis et solutions :</h4>
+                <ul class="competences">
+                    <li><strong>Configuration des interfaces réseau :</strong> Configuration correcte des interfaces LAN et OPT1 sur chaque pfSense pour assurer une communication appropriée et la redondance.</li>
+                    <li><strong>Configuration des adresses IP virtuelles et CARP :</strong> Configuration précise des VIP, du VHID, de la fréquence de publicité et du mot de passe CARP pour un basculement efficace.</li>
+                    <li><strong>Synchronisation DHCP :</strong> Assurer que le service DHCP utilise la VIP comme passerelle et configurer la synchronisation des baux DHCP.</li>
+                    <li><strong>Synchronisation pfsync et XMLRPC :</strong> Configuration correcte des adresses IP de synchronisation, des identifiants et des services à synchroniser entre les pfSense.</li>
+                    <li><strong>Règles de pare-feu pour la HD :</strong> Création de règles autorisant le trafic TCP sur le port 443 pour XMLRPC et le trafic pfsync.</li>
+                </ul>
+
+                <h4>Résultats et compétences acquises :</h4>
+                <ul class="competences">
+                    <li>Mise en place d'une solution de haute disponibilité avec deux pare-feu pfSense fonctionnels, assurant la redondance et le basculement automatique.</li>
+                    <li>Configuration réussie des adresses IP virtuelles (VIP) avec CARP pour une transition transparente en cas de défaillance.</li>
+                    <li>Automatisation de la synchronisation des configurations et des états de connexion entre les pare-feu pfSense.</li>
+                    <li>Compétences acquises dans la configuration avancée de pfSense, la mise en œuvre de la haute disponibilité, la gestion des services réseau redondants et la résolution de problèmes liés à la redondance réseau.</li>
+                </ul>
+                <p>
+                    La mise en place de cette solution de haute disponibilité a permis de garantir la continuité des services réseau en éliminant le point de défaillance unique. Les tests de basculement ont confirmé l'efficacité de la configuration et la capacité du système à maintenir les opérations en cas de défaillance d'un pare-feu. Ce projet a permis de renforcer les compétences en administration réseau et en conception d'architectures résilientes.
                 </p>
             </div>
         </div>
-        <div class="realisation" data-summary="" data-image="" data-refdoc="" data-refdownload="">
+        <div class="realisation" data-summary="" data-image="" data-refdoc="../asset/document/Compte rendu - WDS Teo BASOL.pdf" data-refdownload="../asset/document/Compte rendu - WDS Teo BASOL.pdf">
             <span>Déploiement d'installation Windows avec WDS</span>
             <button class="button">En savoir plus</button>
             <div class="summaryText">
-                <h3 class="title"></h3>
+                <h3 class="title">Mise en service et paramétrage d'un serveur WDS (Gestion de Déploiement Windows)</h3>
                 <p>
-                    En cours de traitement
+                    Ce compte rendu détaille le processus de mise en service et de paramétrage d'un serveur WDS (Windows Deployment Services). Les étapes initiales comprennent la configuration réseau à l'aide de Pfsense, suivie de la mise en œuvre du démarrage réseau PXE, l'importation et la configuration du CD Windows sur le serveur, et enfin, l'optimisation du déploiement Windows avec les fichiers de réponses XML (unattend.xml).
+                </p>
+
+                <h4>Choix techniques et démarche :</h4>
+                <ul class="competences">
+                    <li><strong>Pfsense pour la configuration réseau : </strong> Utilisation de Pfsense pour une configuration réseau avancée (WAN/LAN, DHCP) et sécurisée.</li>
+                    <li><strong>Démarrage PXE :</strong> Implémentation du démarrage PXE pour un déploiement centralisé de Windows.</li>
+                    <li><strong>Disque dur dédié pour WDS :</strong> Allocation d'un disque dur séparé pour optimiser le stockage des images WDS (boot.wim, install.wim).</li>
+                    <li><strong>Console MMC :</strong> Gestion simplifiée du service WDS via la console MMC. </li>
+                    <li><strong>Automatisation avec unattend.xml :</strong> Recours aux fichiers unattend.xml et à Windows SIM pour automatiser et standardiser le déploiement de Windows.</li>
+                </ul>
+
+                <h4>Défis et solutions :</h4>
+                <ul class="competences">
+                    <li><strong>Configuration réseau initiale :</strong> Création et configuration des cartes réseau de la machine virtuelle avec Pfsense, en définissant les rôles WAN et LAN. Configuration du DHCP via l'interface web pour autoriser le port LAN à attribuer des adresses IP.</li>
+                    <li><strong>Préparation du serveur pour le service WDS :</strong> Allocation d'un nouveau disque dur à la machine virtuelle, formatage et renommage de ce disque pour servir de dépôt aux images de démarrage et d'installation de Windows.</li>
+                    <li><strong>Automatisation du déploiement de Windows :</strong> Utilisation de fichiers de réponses XML (unattend.xml) pour automatiser l'installation de Windows, réduisant ainsi les interventions manuelles et assurant une configuration uniforme des postes.</li>
+                </ul>
+
+                <h4>Résultats et compétences acquises :</h4>
+                <ul class="competences">
+                    <li>Mise en place d'un serveur WDS fonctionnel, capable de déployer des systèmes d'exploitation Windows sur des postes clients via le réseau.</li>
+                    <li>Configuration réussie du démarrage réseau PXE, permettant aux nouvelles machines d'être redirigées vers le serveur WDS après avoir obtenu leur IP via DHCP.</li>
+                    <li>Automatisation du processus d'installation de Windows à l'aide de fichiers unattend.xml, ce qui a permis de gagner du temps, d'assurer la cohérence et de réduire les erreurs humaines.</li>
+                    <li>Compétences acquises dans la configuration réseau avec Pfsense, la gestion des services DHCP, la préparation de disques durs pour le déploiement, l'utilisation de la console MMC, et l'automatisation du déploiement de Windows avec les fichiers unattend.xml.</li>
+                </ul>
+                <p>
+                    La mise en service et le paramétrage du serveur WDS ont permis d'établir une infrastructure efficace pour le déploiement automatisé de systèmes d'exploitation Windows. L'utilisation de fichiers de réponses XML s'est avérée cruciale pour optimiser le processus, en réduisant le temps nécessaire au déploiement, en assurant la cohérence de la configuration et en minimisant les erreurs. Ce projet a permis de développer des compétences essentielles en administration système et en automatisation du déploiement.
                 </p>
             </div>
         </div>
-        <div class="realisation" data-summary="" data-image="" data-refdoc="" data-refdownload="">
-            <span>Mise en place d'un VPN entre deux routeurs Mikrotik</span>
-            <button class="button">En savoir plus</button>
-            <div class="summaryText">
-                <h3 class="title"></h3>
-                <p>
-                    En cours de traitement
-                </p>
-
-            </div>
-        </div>
-
     </div>
 
     <h2>Missions réalisées en Entreprise</h2>
@@ -204,17 +248,6 @@
         </div>
         <div class="realisation" data-summary="" data-image="" data-refdoc="" data-refdownload="">
             <span>Scripting et automatisation des tâches de support (Batch/Powershell)</span>
-            <button class="button">En savoir plus</button>
-            <div class="summaryText">
-                <h3 class="title"></h3>
-                <p>
-                    En cours de traitement
-                </p>
-
-            </div>
-        </div>
-        <div class="realisation" data-summary="" data-image="" data-refdoc="" data-refdownload="">
-            <span>Création d'un annuaire sous le format d'une application avec AppSheet </span>
             <button class="button">En savoir plus</button>
             <div class="summaryText">
                 <h3 class="title"></h3>
