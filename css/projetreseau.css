@@ -22,3 +22,24 @@ h2{
 .paragraph ul li {
     margin-bottom: 0.5rem;  /* Espacement entre les éléments */
 }
+
+
+/* footer */
+
+footer {
+    text-align: center;
+    line-height: 4.5rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 76.8rem) {
+    footer{
+        position: unset;
+    }
+}
+
+@media (hover: none) {
+
+}

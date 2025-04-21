@@ -183,7 +183,7 @@
 
                 <h4>Choix techniques et démarche :</h4>
                 <ul class="competences">
-                    <li><strong>Pfsense pour la configuration réseau : </strong> Utilisation de Pfsense pour une configuration réseau avancée (WAN/LAN, DHCP) et sécurisée.</li>
+                    <li><strong>Pfsense pour la configuration réseau : </strong> Utilisation de Pfsense pour une configuration réseau avancée (LAN, DHCP) et sécurisée.</li>
                     <li><strong>Démarrage PXE :</strong> Implémentation du démarrage PXE pour un déploiement centralisé de Windows.</li>
                     <li><strong>Disque dur dédié pour WDS :</strong> Allocation d'un disque dur séparé pour optimiser le stockage des images WDS (boot.wim, install.wim).</li>
                     <li><strong>Console MMC :</strong> Gestion simplifiée du service WDS via la console MMC. </li>
@@ -228,22 +228,77 @@
             <span>Relance de mail automatisée avec Appscript</span>
             <button class="button">En savoir plus</button>
             <div class="summaryText">
-                <h3 class="title"></h3>
+                <h3 class="title">Automatisation des relances pour le suivi du remplissage des données des projets</h3>
                 <p>
-                    En cours de traitement
+                    Ce compte rendu détaille le développement d'un script JavaScript (Google Apps Script) pour automatiser les relances des utilisateurs concernant le taux de remplissage des données des projets, ces données étant utilisées pour le calcul de l'intéressement des salariés. Les étapes initiales comprennent la lecture des données depuis un fichier Google Sheets, l'analyse de différents champs pour déterminer les relances nécessaires, l'envoi automatisé d'emails aux groupes projet, et la mise en place d'une gestion d'erreurs et de déclencheurs temporels.
                 </p>
+                <h4>Choix techniques et démarche :</h4>
+                <ul class="competences">
+                    <li><strong>Script JavaScript (Google Apps Script) :</strong> Utilisation de Google Apps Script pour développer le script d'automatisation, directement intégré à Google Sheets.</li>
+                    <li><strong>Lecture des données Google Sheets :</strong> Accès et lecture des données des projets depuis un fichier Google Sheets.</li>
+                    <li><strong>Analyse des données :</strong> Analyse de champs tels que le statut de l'affaire, le prochain rendu, la phase en cours, le nom du chef de projet, le mail du groupe projet, le nom et le numéro d'affaire, et le taux de remplissage.</li>
+                    <li><strong>Relances automatisées par email :</strong> Envoi automatique d'emails de relance aux groupes projet concernés.</li>
+                    <li><strong>Gestion d'erreurs :</strong> Implémentation de plusieurs phases de vérification : vérification du remplissage des données, du taux de remplissage (en %), et gestion des erreurs pour les données critiques manquantes.</li>
+                    <li><strong>Affichage des données :</strong> Alerte automatique de l'administration en charge de la gestion des taux de remplissage en cas de données critiques manquantes.</li>
+                    <li><strong>Déclencheurs App Script :</strong> Utilisation des déclencheurs intégrés à App Script pour automatiser l'exécution périodique du script.</li>
+                </ul>
 
+                <h4>Défis et solutions :</h4>
+                <ul class="competences">
+                    <li><strong>Logique de relance complexe :</strong> Implémentation d'une logique de relance qui prend en compte différents critères et priorise les actions.</li>
+                    <li><strong>Envoi et planification d'emails automatisés :</strong> Configuration de l'envoi d'emails via Google Apps Script, y compris la gestion des destinataires, la personnalisation des messages et la gestion des déclencheurs App Script pour assurer une exécution fiable et régulière du script.</li>
+                    <li><strong>Gestion des erreurs et alertes :</strong> Mise en place d'un système robuste de gestion des erreurs pour identifier et signaler les problèmes critiques.</li>
+                </ul>
+
+                <h4>Résultats et compétences acquises :</h4>
+                <ul class="competences">
+                    <li>Automatisation réussie des relances pour le suivi du remplissage des données des projets.</li>
+                    <li>Amélioration de la complétude et de la qualité des données utilisées pour le calcul de l'intéressement.</li>
+                    <li>Réduction du temps passé à effectuer manuellement les relances.</li>
+                    <li>Mise en place d'un système d'alerte efficace pour les données critiques manquantes.</li>
+                    <li>Compétences acquises en programmation JavaScript (Google Apps Script), manipulation des données Google Sheets, automatisation des emails, gestion des erreurs, et utilisation des déclencheurs App Script.</li>
+                </ul>
+                <p>
+                    Ce script a permis d'optimiser le processus de collecte des données nécessaires au calcul de l'intéressement, en garantissant une meilleure qualité des données et en libérant du temps aux équipes. L'utilisation des déclencheurs App Script assure une exécution continue et fiable du processus. Cette mission a permis de renforcer les compétences en automatisation et en développement de solutions adaptées aux outils Google Workspace.
+                </p>
             </div>
         </div>
         <div class="realisation" data-summary="" data-image="" data-refdoc="" data-refdownload="">
             <span>Relevé des maquettes Revit du serveur de fichier en Python</span>
             <button class="button">En savoir plus</button>
             <div class="summaryText">
-                <h3 class="title"></h3>
+                <h3 class="title">Automatisation de la collecte et de l'exportation des données des maquettes Revit</h3>
                 <p>
-                    En cours de traitement
+                    Ce compte rendu détaille le développement d'un script Python pour automatiser la collecte et l'exportation des données des maquettes Revit (.rvt) stockées sur un serveur de fichiers Windows. Les étapes initiales comprennent la recherche des fichiers .rvt, l'extraction des informations pertinentes, le stockage des données dans un tableau, l'exportation des données vers un serveur FTP, et l'affichage des données via Google Sheets.
                 </p>
+                <h4>Choix techniques et démarche :</h4>
+                <ul class="competences">
+                    <li><strong>Script Python :</strong> Développement d'un script Python pour automatiser la recherche, la collecte et l'exportation des données.</li>
+                    <li><strong>Exploration du serveur de fichiers :</strong> Utilisation de Python pour parcourir le serveur de fichiers Windows et identifier les fichiers .rvt.</li>
+                    <li><strong>Extraction des données :</strong> Extraction des informations clés des fichiers .rvt, telles que le nom, le numéro d'affaire, le nom de l'affaire, la taille, le chemin d'accès et la date de modification.</li>
+                    <li><strong>Stockage des données :</strong> Organisation des données extraites dans un format tabulaire pour faciliter la manipulation et l'exportation.</li>
+                    <li><strong>Exportation vers FTP :</strong> Utilisation d'un fichier .env pour stocker les informations de connexion au serveur FTP et exportation des données vers ce serveur.</li>
+                    <li><strong>Affichage des données :</strong> Utilisation de Google Sheets et de la fonction IMPORTRANGE pour afficher les données collectées.</li>
+                </ul>
 
+                <h4>Défis et solutions :</h4>
+                <ul class="competences">
+                    <li><strong>Accès au serveur de fichiers Windows :</strong> Gestion des autorisations et des chemins d'accès pour accéder aux fichiers .rvt sur le serveur Windows.</li>
+                    <li><strong>Sécurité des informations de connexion :</strong> Utilisation d'un fichier .env pour stocker en toute sécurité les informations d'identification du serveur FTP.</li>
+                    <li><strong>Extraction efficace des données :</strong> Implémentation de méthodes pour extraire rapidement et précisément les informations nécessaires à partir du serveur de fichiers.</li>
+                </ul>
+
+                <h4>Résultats et compétences acquises :</h4>
+                <ul class="competences">
+                    <li>Automatisation réussie de la collecte et de l'exportation des données des maquettes Revit.</li>
+                    <li>Extraction et stockage efficaces des informations clés des fichiers .rvt.</li>
+                    <li>Exportation sécurisée des données vers un serveur FTP à l'aide d'un fichier .env.</li>
+                    <li>Affichage pratique des données dans Google Sheets pour une consultation facile.</li>
+                    <li>Compétences acquises en programmation Python, manipulation de fichiers et de répertoires, automatisation de tâches, gestion de données, utilisation de FTP et gestion de la sécurité des informations.</li>
+                </ul>
+                <p>
+                    Ce script a permis d'automatiser un processus fastidieux et répétitif, améliorant ainsi l'efficacité et réduisant le risque d'erreurs humaines. L'utilisation de Google Sheets pour l'affichage des données facilite l'accès et la collaboration. Ce projet a permis de développer des compétences importantes en automatisation et en gestion de données dans un environnement de travail.
+                </p>
             </div>
         </div>
         <div class="realisation" data-summary="" data-image="" data-refdoc="" data-refdownload="">
