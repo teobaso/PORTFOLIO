@@ -295,7 +295,7 @@
                 </p>
             </div>
         </div>
-        <div class="realisation" data-summary="" data-image="" data-refdoc="" data-refdownload="">
+        <div class="realisation" data-summary="" data-image="" data-refdoc="../asset/document/Compte Rendu - Relevé maquette Revit - Teo BASOL.pdf" data-refdownload="../asset/document/Compte Rendu - Relevé maquette Revit - Teo BASOL.pdf">
             <span>Relevé des maquettes Revit du serveur de fichier en Python</span>
             <button class="button">En savoir plus</button>
             <div class="summaryText">
@@ -333,26 +333,73 @@
                 </p>
             </div>
         </div>
-        <div class="realisation" data-summary="" data-image="" data-refdoc="" data-refdownload="">
+        <div class="realisation" data-summary="" data-image="" data-refdoc="../asset/document/Compte Rendu - Script d'installation de Desktop Connector - Teo BASOL.pdf" data-refdownload="../asset/document/Compte Rendu - Script d'installation de Desktop Connector - Teo BASOL.pdf">
             <span>Scripting et automatisation des tâches de support (Batch/Powershell)</span>
             <button class="button">En savoir plus</button>
             <div class="summaryText">
-                <h3 class="title"></h3>
+                <h3 class="title">Automatisation de l'installation et de la mise à jour de Desktop Connector</h3>
                 <p>
-                    En cours de traitement
+                    Ce compte rendu détaille la création et l'utilisation d'un script PowerShell pour automatiser l'installation et la mise à jour de Desktop Connector. Le choix de PowerShell a été privilégié pour sa pertinence dans la perspective d'un déploiement via GPO, facilitant ainsi la gestion centralisée des mises à jour du logiciel. Le script assure une installation propre et à jour de Desktop Connector sur les postes de travail.
                 </p>
+                <h4>Choix techniques et démarche :</h4>
+                <ul class="competences">
+                    <li><strong>Scripts PowerShell :</strong> Utilisation de PowerShell pour automatiser le processus d'installation et de mise à jour de Desktop Connector.</li>
+                    <li><strong>Vérification de la version :</strong> Le script commence par vérifier la version de Desktop Connector actuellement installée sur le poste de travail.</li>
+                    <li><strong>Installation conditionnelle et silencieuse :</strong> Le script installe silencieusement la nouvelle version si la version installée diffère de la version cible.</li>
+                </ul>
 
+                <h4>Défis et solutions :</h4>
+                <ul class="competences">
+                    <li><strong>Gestion des versions :</strong> Implémentation d'une méthode fiable pour déterminer la version installée de Desktop Connector et la comparer à la version cible.</li>
+                    <li><strong>Installation silencieuse :</strong> Identification et utilisation correcte des flags d'installation pour assurer une installation en mode silencieux.</li>
+                    <li><strong>Gestion des processus :</strong> Intégration de commandes pour arrêter correctement le processus Desktop Connector avant l'installation et le redémarrer après.</li>
+                    <li><strong>Gestion des erreurs :</strong> Inclusion de la gestion des erreurs pour traiter les problèmes potentiels lors de l'installation ou de la mise à jour.</li>
+                    <li><strong>Déploiement via GPO :</strong> Conception du script pour qu'il puisse être facilement intégré et déployé via une Stratégie de Groupe (GPO).</li>
+                </ul>
+
+                <h4>Résultats et compétences acquises :</h4>
+                <ul class="competences">
+                    <li>Automatisation réussie de l'installation et de la mise à jour de Desktop Connector.</li>
+                    <li>Installation propre et à jour de Desktop Connector sur les postes de travail.</li>
+                    <li>Mise en place de solutions d'automatisation pour des tâches complexes, telles que l'installation de logiciels et la gestion des sauvegardes.</li>
+                    <li>Compétences acquises en scripting PowerShell, gestion des processus et installation de logiciels</li>
+                </ul>
+                <p>
+                    Ce script a permis de rationaliser le déploiement et la maintenance de Desktop Connector, en assurant une installation à jour et en facilitant la gestion des mises à jour à l'échelle de l'agence grâce à sa compatibilité avec les GPO. Il a permis de développer des compétences précieuses en matière d'automatisation du déploiement de logiciels et de gestion de systèmes.
+                </p>
             </div>
         </div>
-        <div class="realisation" data-summary="" data-image="" data-refdoc="" data-refdownload="">
+        <div class="realisation" data-summary="" data-image="" data-refdoc="../asset/document/Compte Rendu - Déploiement de Desktop Connector - Teo BASOL.pdf" data-refdownload="../asset/document/Compte Rendu - Déploiement de Desktop Connector - Teo BASOL.pdf">
             <span>Création et déploiement de GPO</span>
             <button class="button">En savoir plus</button>
             <div class="summaryText">
-                <h3 class="title"></h3>
+                <h3 class="title">Configuration et déploiement de GPO pour Desktop Connector</h3>
                 <p>
-                    En cours de traitement
+                    Ce compte rendu détaille la configuration et le déploiement de Stratégies de Groupe (GPO) visant à automatiser l'installation et la mise à jour de Desktop Connector. Cet exemple illustre l'intégralité du processus, qui a débuté par la création d'un script d'installation PowerShell pour Desktop Connector. L'objectif principal est de centraliser la gestion de Desktop Connector, d'assurer la cohérence de son déploiement et de simplifier les mises à jour logicielles.
                 </p>
+                <h4>Choix techniques et démarche :</h4>
+                <ul class="competences">
+                    <li><strong>Stratégies de Groupe (GPO) :</strong> Utilisation des GPO de Windows Server pour configurer centralement le déploiement de Desktop Connector sur les postes de travail du domaine.</li>
+                    <li><strong>Déploiement de logiciels via GPO :</strong> Création d'une GPO pour automatiser l'installation de Desktop Connector, assurant un déploiement standardisé et simplifié.</li>
+                    <li><strong>Mises à jour logicielles via GPO :</strong> À chaque nouvelle version, la modification du script déclenchera automatiquement son exécution par la GPO.</li>
+                </ul>
 
+                <h4>Défis et solutions :</h4>
+                <ul class="competences">
+                    <li><strong>Ciblage précis des GPO :</strong> Définition de filtres de sécurité et utilisation de l'héritage des GPO pour appliquer la stratégie aux groupes d'utilisateurs et aux postes de travail appropriés.</li>
+                    <li><strong>Déploiement fiable des logiciels :</strong> Configuration de la GPO pour assurer un déploiement de Desktop Connector fiable, en tenant compte des exigences d'installation.</li>
+                    <li><strong>Optimisation des performances :</strong> Conception de la GPO pour minimiser l'impact sur les performances des postes de travail et le temps de déconnexion des utilisateurs.</li>
+                </ul>
+
+                <h4>Résultats et compétences acquises :</h4>
+                <ul class="competences">
+                    <li>Automatisation de l'installation et des mises à jour de Desktop Connector, ce qui a permis de gagner du temps et d'assurer la cohérence des configurations.</li>
+                    <li>Centralisation réussie de la gestion de Desktop Connector grâce à la configuration et au déploiement de GPO.</li>
+                    <li>Compétences acquises dans la planification et la mise en œuvre de GPO, le déploiement de logiciels, la gestion des mises à jour.</li>
+                </ul>
+                <p>
+                    L'utilisation de GPO pour déployer et maintenir Desktop Connector a permis d'améliorer l'efficacité de l'administration système, en automatisant le processus d'installation et de mise à jour. Cette approche centralisée garantit une configuration cohérente sur tous les postes de travail et simplifie la gestion continue du logiciel. Les compétences acquises dans la gestion des GPO sont cruciales pour assurer un environnement informatique stable, sécurisé et facile à administrer.
+                </p>
             </div>
         </div>
     </div>
@@ -393,7 +440,7 @@
         </ul>
     </div>
     <div class="rss">
-        <a href="https://feeder.co/reader?addParentFolderId=folder%2F1910019">Flux RSS</a>
+        <a href="https://feeder.co/reader?addParentFolderId=folder%2F1910019" target="_blank">Flux RSS</a>
     </div>
 
     <div class="popup" id="popup">
