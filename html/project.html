@@ -213,50 +213,50 @@
 
     <h2>Missions réalisées en Entreprise</h2>
     <div class="projet">
-        <div class="realisation" data-summary="" data-image="" data-refdoc="" data-refdownload="">
-            <span>Création d'une application en C#</span>
+        <div class="realisation" data-summary="" data-image="" data-refdoc="../asset/document/Compte Rendu - Sauvegarde avec Rclone - Teo BASOL.pdf" data-refdownload="../asset/document/Compte Rendu - Sauvegarde avec Rclone - Teo BASOL.pdf">
+            <span>Création et gestion d'un backup avec Rclone</span>
             <button class="button">En savoir plus</button>
             <div class="summaryText">
-                <h3 class="title">Développement d'une application C# pour l'accès rapide aux dossiers de projets</h3>
+                <h3 class="title">Migration Chiffrée d'un NAS vers Google Drive Partagé avec Rclone</h3>
                 <p>
-                    Ce compte rendu détaille le développement d'une application C# visant à simplifier et accélérer l'accès aux dossiers de projets partagés sur un serveur de fichiers Windows. Les étapes initiales comprennent la conception de l'interface utilisateur, la logique de recherche des dossiers, l'ouverture l'explorateur de fichiers Windows, la configuration de l'interface via un fichier XML, et le déploiement de l'application via un installateur MSI et une GPO.
+                    Ce compte rendu décrit la mise en place d'une migration de données depuis un serveur NAS vers un Google Drive partagé, en utilisant l'outil en ligne de commande Rclone. L'objectif principal était d'assurer une migration sécurisée grâce au chiffrement des données et d'automatiser le processus de synchronisation avec sauvegarde. Les étapes clés incluent l'installation et la configuration de Rclone, l'établissement de la connexion avec Google Drive, la mise en œuvre du chiffrement, et la création d'un script pour l'automatisation.
                 </p>
                 <h4>Choix techniques et démarche :</h4>
                 <ul class="competences">
-                    <li><strong>Application C# :</strong> Développement d'une application de bureau en C# pour une intégration native et une meilleure compatibilité avec Windows.</li>
-                    <li><strong>Interface utilisateur :</strong> Création d'une interface utilisateur avec une section de saisie pour les premiers caractères du nom de l'affaire et un menu déroulant pour les sous-dossiers.</li>
-                    <li><strong>Recherche de dossiers :</strong> Implémentation d'une logique de recherche qui filtre les dossiers en fonction des caractères saisis.</li>
-                    <li><strong>Intégration avec l'explorateur de fichiers :</strong> Utilisation de C# pour ouvrir directement les dossiers sélectionnés dans l'explorateur de fichiers Windows.</li>
-                    <li><strong>Création d'un installateur MSI :</strong> Génération d'un installateur au format MSI pour faciliter le déploiement de l'application.</li>
-                    <li><strong>Déploiement via GPO :</strong> Déploiement automatisé de l'application sur les postes de travail de l'agence via une stratégie de groupe (GPO).</li>
-                    <li><strong>Fichier de configuration XML :</strong> Création d'un raccourci sur le bureau avec une icône personnalisée pour un accès facile à l'application et la configuration de l'interface.</li>
+                    <li><strong>Outil Rclone :</strong> Utilisation de l'outil en ligne de commande Rclone pour sa flexibilité et ses fonctionnalités de synchronisation et de chiffrement vers divers stockages cloud.</li>
+                    <li><strong>Installation et Configuration :</strong> Téléchargement de Rclone, configuration initiale via la commande rclone config pour créer un nouveau "remote".</li>
+                    <li><strong>Connexion à Google Drive :</strong> Sélection de Google Drive comme type de remote, configuration de l'accès (scope), et authentification via navigateur web.</li>
+                    <li><strong>Utilisation du Drive Partagé :</strong> Configuration spécifique pour utiliser un Drive Partagé en sélectionnant l'ID correspondant.</li>
+                    <li><strong>Chiffrement :</strong> Création d'un remote de type "crypt" superposé au remote Google Drive pour chiffrer les données et éventuellement les noms de fichiers/dossiers avant l'envoi.</li>
+                    <li><strong>Synchronisation :</strong> Emploi de la commande rclone sync pour copier les fichiers du NAS vers le remote Google Drive (chiffré ou non), avec des options pour afficher la progression et les détails.</li>
+                    <li><strong>Sauvegardes Automatisées :</strong> Développement d'un script batch pour automatiser la synchronisation et créer des sauvegardes datées des fichiers modifiés ou supprimés avec des variables de date/heure.</li>
                 </ul>
 
                 <h4>Défis et solutions :</h4>
                 <ul class="competences">
-                    <li><strong>Conception de l'interface utilisateur :</strong> Création d'une interface intuitive et conviviale qui répond aux besoins des utilisateurs.</li>
-                    <li><strong>Logique de recherche efficace :</strong> Implémentation d'une recherche rapide et précise des dossiers, même avec des noms similaires.</li>
-                    <li><strong>Gestion des chemins d'accès :</strong> Gestion correcte des chemins d'accès aux dossiers partagés sur le serveur de fichiers, en tenant compte des éventuelles variations.</li>
-                    <li><strong>Manipulation du fichier XML :</strong> </li>
-                    <li><strong></strong> Lecture et écriture efficaces des données de configuration dans le fichier XML.</li>
-                    <li><strong>Création et personnalisation de l'installateur MSI :</strong> Configuration de l'installateur MSI pour une installation fluide et personnalisée.</li>
-                    <li><strong>Déploiement via GPO :</strong> Configuration et déploiement de la GPO pour une installation automatisée et centralisée sur tous les postes de travail.</li>
+                    <li><strong>Configuration Initiale :</strong> Naviguer les nombreuses options lors de la configuration initiale (rclone config), notamment le choix du bon type de remote, la définition des scopes d'accès et l'identification du Drive partagé.</li>
+                    <li><strong>Gestion du Chiffrement :</strong> Choix des options de chiffrement et gestion sécurisée des mots de passe nécessaires pour le remote chiffré.</li>
+                    <li><strong>Authentification :</strong> Comprendre les différentes méthodes d'authentification.</li>
+                    <li><strong>Script d'Automatisation :</strong> Création d'un script robuste pour récupérer dynamiquement la date et l'heure, gérer les chemins correctement, et configurer la journalisation des erreurs.</li>
+                    <li><strong>Maintenance et Récupération :</strong> Anticiper les problèmes potentiels comme la suppression du compte Google lié ou de la session Windows, et documenter la procédure de récupération (réinstallation, reconfiguration, récupération des mots de passe et scripts).</li>
+                    <li><strong>Validation :</strong> Nécessité de réaliser des tests réguliers pour vérifier le bon fonctionnement de la synchronisation, des modifications et de la récupération des données déchiffrées depuis le Drive.</li>
                 </ul>
 
                 <h4>Résultats et compétences acquises :</h4>
                 <ul class="competences">
-                    <li>Développement d'une application C# fonctionnelle qui simplifie et accélère l'accès aux dossiers de projets.</li>
-                    <li>Interface utilisateur intuitive avec recherche et sélection rapide des dossiers.</li>
-                    <li>Déploiement efficace de l'application sur tous les postes de travail via une GPO.</li>
-                    <li>Automatisation de l'installation et configuration pour les utilisateurs.</li>
-                    <li>Compétences acquises en développement C#, conception d'interface utilisateur, manipulation de répertoires, gestion de fichiers XML, création d'installateurs MSI, et déploiement via GPO.</li>
+                    <li>Mise en place réussie d'un processus de migration et de synchronisation chiffrée entre un NAS et Google Drive Partagé.</li>
+                    <li>Création d'un remote chiffré assurant la confidentialité des données stockées sur Google Drive.</li>
+                    <li>Développement d'un script d'automatisation pour la synchronisation régulière avec un système de sauvegarde versionnée par date.</li>
+                    <li>Documentation des procédures d'installation, configuration, et récupération.</li>
+                    <li>Compétences acquises en utilisation avancée de Rclone, configuration de stockage cloud, mise en œuvre de chiffrement de données, scripting batch sous Windows, et gestion de processus de sauvegarde automatisée.</li>
+                    <li>Compréhension pratique de la synchronisation de données et de la gestion des API cloud via un outil tiers.</li>
                 </ul>
                 <p>
-                    Ce projet a permis de répondre à un besoin spécifique de l'équipe administrative en optimisant leur flux de travail et a finalement bénéficié à l'ensemble de l'agence en facilitant l'accès aux ressources partagées. Il a également permis de consolider des compétences importantes en développement d'applications Windows et en déploiement à grande échelle.
+                    Ce projet a permis de sécuriser le stockage des données de l'entreprise sur Google Drive grâce au chiffrement et d'automatiser une tâche essentielle de sauvegarde et de migration. Il a renforcé les compétences en administration système, en sécurité des données et en automatisation via scripting. La documentation assure la maintenabilité de la solution.
                 </p>
             </div>
         </div>
-        <div class="realisation" data-summary="" data-image="" data-refdoc="" data-refdownload="">
+        <div class="realisation" data-summary="" data-image="" data-refdoc="../asset/document/Compte Rendu - Relance automatisée AppScript - Teo BASOL.pdf" data-refdownload="">
             <span>Relance de mail automatisée avec Appscript</span>
             <button class="button">En savoir plus</button>
             <div class="summaryText">
