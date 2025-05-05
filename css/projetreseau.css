@@ -38,6 +38,12 @@ footer {
     footer{
         position: unset;
     }
+    header ul{
+        align-items: center;
+    }
+    .aboutme{
+        padding: 1rem;
+    }
 }
 
 @media (hover: none) {

@@ -26,3 +26,12 @@ h2{
 .paragraph ol li p {
     margin-left: 1rem;
 }
+
+@media screen and (max-width: 76.8rem) {
+    header ul{
+        align-items: center;
+    }
+    .aboutme{
+        padding: 1rem;
+    }
+}
